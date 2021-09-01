@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Landing from "./components/Landing";
 import Benefits from "./components/Benefits";
 import Ingredients from "./components/Ingredients";
+import Shop from "./components/Shop";
 import Logo from "./img/moringa-logo.jpg";
 
 function App() {
@@ -26,7 +27,7 @@ function App() {
               Tápanyagok
             </Link>
 
-            <Link className="menuLinks" to="/menu3">
+            <Link className="menuLinks" to="/shop">
               Vásárlás
             </Link>
 
@@ -40,7 +41,7 @@ function App() {
           <Route path="/" exact component={Landing} />
           <Route path="/benefits" component={Benefits} />
           <Route path="/ingredients" component={Ingredients} />
-          <Route path="/menu3" />
+          <Route path="/shop" component={Shop} />
           <Route path="/menu4" />
         </Switch>
       </Router>
