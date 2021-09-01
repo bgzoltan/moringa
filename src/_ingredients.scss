@@ -1,0 +1,144 @@
+#ingredientsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  font-size: $textFontSize;
+  color: $textColor;
+  font-family: 'Encode Sans', sans-serif;
+
+  h1 {
+    font-family: 'Encode Sans', sans-serif;
+    color: $textColorHead;
+    font-size: calc(#{$textFontSize} * 3.5);
+    font-weight: 800;
+    .textHighl{
+      color : $textColorHeadHighl;
+    }
+  }
+
+  #ingredientsTitleText {
+    color : $textColorHeadHighl;
+    font-size: calc(#{$textFontSize} * 1.3);
+    font-weight: 400;
+    padding: 5px;
+  }
+
+  h2 {
+    // font-family: 'Caveat Brush', cursive;
+    font-family: 'Encode Sans', sans-serif;
+    font-size: calc(#{$textFontSize} * 1.2);
+    font-weight: 500;
+    color: $textColor;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  p {
+    font-family: 'Encode Sans', sans-serif;
+    font-size: calc(#{$textFontSize} * 1.1);
+    font-weight: 400;
+    color: $textColor;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  #nutrientsContainer{
+    width:100vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    background-color: #5a4134;
+  }
+
+  #nutrients {
+    height: $gridSize;
+    width: $gridSize;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    font-size: $textFontSize;
+    font-family: 'Encode Sans', sans-serif;
+
+    .nutrientBox {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      background-color: $graphColorDarkBcgr;
+      // clip-path: polygon(50% 12%, 12% 80%, 88% 80%);
+      clip-path: circle(40%);
+      margin: 10px;
+      text-align: center;
+    }
+
+    .box1 {
+      transform: translateX(40px) translateY(120px);
+    }
+
+    .box3 {
+      transform: translateX(-40px) translateY(120px);
+    }
+
+    .box5 {
+      transform: scaleX(1.5) scaleY(1.5);
+      background-color: $graphColorLightBcgr;
+    }
+
+    .box7 {
+      transform: translateX(40px) translateY(-120px);
+    }
+
+    .box9 {
+      transform: translateX(-40px) translateY(-120px);
+    }
+  }
+
+  li {
+    display: flex;
+    position: relative;
+    #line {
+      width: 100px;
+      border-top: 1px solid black;
+      position: absolute;
+      height: 10px;
+      margin-top: 75px;
+      left: 90px;
+      z-index: -1;
+    }
+
+    .fruits {
+      width: 150px;
+      height: 150px;
+      background-color: $graphColorLightBcgr;
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      margin: 20px;
+    }
+    .ingredientsText {
+      font-size: $textFontSize;
+      color: $textColor;
+      font-family: 'Encode Sans', sans-serif;
+      max-width: 600px;
+      color: $graphColorLight;
+      background-color: $graphColorDarkBcgr;
+      padding: 15px;
+      // border: 1px solid black;
+      margin: 20px 10px 20px 0px;
+      border-radius: 9px;
+      h2{
+ 
+        color: $graphColorLight;
+      }
+      p{
+ 
+        color: $graphColorLight;
+      }
+    }
+  }
+}

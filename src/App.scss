@@ -1,0 +1,343 @@
+@import "./variables";
+// @import url("https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");/
+// @import url("https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Francois+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Signika+Negative:wght@300;400;600;700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@300;500;800&display=swap');
+@import "./ingredients";
+body {
+     box-sizing: border-box;
+     padding: 0px;
+     margin: 0px;
+     border: 0px;
+     background-color: $mainBgColor;
+     font-size: $textFontSize;
+     color: $textColor;
+     // font-family: "Comic Neue", cursive;
+     font-family: 'Encode Sans', sans-serif;
+     // font-family: 'Signika Negative', sans-serif;
+
+     .specialText{
+          font-family: 'Parisienne', cursive;
+          font-size: calc(#{$textFontSize} * 2.6);
+          padding-left:30px;
+     }
+}
+#navigation {
+     width: 100vw;
+     height: $navBarHeight;
+     display: flex;
+     flex-direction: row;
+     background-color: $navBarBgColor;
+     #logo {
+          width: 200px;
+     }
+     #navBar {
+          display: flex;
+          justify-content: flex-end;
+          align-items: flex-end;
+          width: 100%;
+          margin-right: 50px;
+          color: $navBarColor;
+          .menuLinks {
+               margin-left: 10px;
+               margin-right: 10px;
+               margin-bottom: 10px;
+               color: $navBarColor;
+          }
+     }
+     #logo img {
+          height: $navBarHeight;
+     }
+}
+
+section {
+     .bar1 {
+          display: flex;
+          justify-content: flex-start;
+          background-image: url("./img/moringa1.jpg");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+          // padding:10px;
+     }
+     .bar2 {
+          display: flex;
+          justify-content: flex-end;
+          align-items: flex-end;
+          background-image: url("./img/moringa3.jpg");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+     }
+
+     .bar3 {
+          display: flex;
+          justify-content: flex-start;
+          // align-items: flex-end;
+          background-image: url("./img/moringa2.jpg");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+     }
+
+     .bar7 {
+          display: flex;
+          justify-content: flex-start;
+          background-image: url("./img/moringa7.jpg");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+     }
+
+     .bar8 {
+          display: flex;
+          justify-content: flex-end;
+          background-image: url("./img/moringa8.jpg");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+     }
+
+     .bar9 {
+          display: flex;
+          justify-content: flex-start;
+          background-image: url("./img/moringa9.jpg");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+ 
+          .benefitsHide{
+                  // BENEFITS hide with animation
+                  //  Hide is the default value of BENEFITS then it changes to SHOW depending on the scroll
+                  height: auto;
+                  padding: 30px;
+                  width: 30%;
+                  margin: 50px;
+                  background-color: rgba(0, 114, 152, 0.8);
+
+                  .animatedText {
+                    visibility: visible;
+                    animation-duration: 3s;
+                    animation-name: fadeOut;
+                    animation-fill-mode: forwards;
+
+                    @keyframes fadeOut {
+                        0% {
+                              opacity: 1;
+                         }
+                         100% {
+                              opacity:0;
+                         }
+                    }
+               }
+          }
+           
+          .benefitsShow {
+               // BENEFITS appears with fade animation
+               // "delay" means the passed time between delayed "li" text rows
+               height: auto;
+               padding: 30px;
+               width: 30%;
+               margin: 50px;
+               background-color: rgba(7, 37, 48, 0.6);
+
+               .animatedText {
+                    opacity: 0;
+                    animation-duration: 2s;
+                    animation-name: fadeInLeft;                
+                    animation-fill-mode: forwards;
+
+                    @keyframes fadeInLeft {
+                         0% {
+                              // Text slides from left "-35px" position to right ("0" position)
+                              transform: translate3d(-35px, 0, 0);
+                         }
+                         100% {
+                              opacity: 1;
+                              transform: translate3d(0, 0, 0);
+                         }
+                    }
+               }
+
+               ul{
+                    li{
+                         list-style: none;
+                    }
+               }
+
+               .benefitsTitle {
+                    font-family: 'Signika Negative', sans-serif;
+                    font-size: calc(#{$textFontSize} * 2.3);
+                    font-weight: 700;
+                    height: auto;
+                    padding: 30px;
+               }
+
+
+               
+               //  DELAYS between "li" text rows
+               .delay1 {
+                    animation-delay: $textDelayStart;
+               }
+               .delay2 {
+                    animation-delay: calc(#{$textDelayStart} + #{$textDelay} * 1);
+               }
+               .delay3 {
+                    animation-delay: calc(#{$textDelayStart} + #{$textDelay} * 2);
+               }
+               .delay4 {
+                    animation-delay: calc(#{$textDelayStart} + #{$textDelay} * 3);
+               }
+               .delay5 {
+                    animation-delay: calc(#{$textDelayStart} + #{$textDelay} * 4);
+               }
+               .delay6 {
+                    animation-delay: calc(#{$textDelayStart} + #{$textDelay} * 5);
+               }
+               .delay7 {
+                    animation-delay: calc(#{$textDelayStart} + #{$textDelay} * 6);
+               }
+               .delay8 {
+                    animation-delay: calc(#{$textDelayStart} + #{$textDelay} * 7);
+               }
+               .delay9 {
+                    animation-delay: calc(#{$textDelayStart} + #{$textDelay} * 8);
+               }
+               .delay10 {
+                    animation-delay: calc(#{$textDelayStart} + #{$textDelay} * 9);
+               }
+               .delay11 {
+                    animation-delay: calc(#{$textDelayStart} + #{$textDelay} * 10);
+               }
+          }
+     }
+
+     .bar10 {
+          display: flex;
+          justify-content: flex-end;
+          background-image: url("./img/moringa10.jpg");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+     }
+
+     .feature {
+          height: auto;
+          width: 100vw;
+          border: 1px solid;
+     }
+
+     .featureBar1 {
+          display: flex;
+          flex-direction: column;
+          color: black;
+          // justify-content: space-between;
+          // background-image: url("./img/moringa-oleifera.jpg");
+          // background-repeat: no-repeat;
+          // background-position: center;
+          // padding:10px;
+          .featureTitle {
+               text-align: center;
+               // font-family: "Francois One", sans-serif;
+               font-size: calc(#{$textFontSize} * 2);
+               font-weight: 700;
+          }
+          .featureColumns {
+               display: flex;
+               flex-direction: row;
+               justify-content: space-evenly;
+               // background-color: blue;
+               height: $featureBarHeight;
+
+               .feature1 {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+                    justify-content: center;
+                    background-color: rgba(0, 114, 152, 0.8);
+                    width: $featureBarHeight;
+                    height: calc( #{$featureBarHeight} - 20px );
+                    border: 1px solid;
+                    // border-radius: 50%;
+                    text-align: center;
+               }
+          }
+     }
+
+     .info {
+          height: $infoBarHeight;
+          width: 100vw;
+          border: 1px solid;
+
+          #infoContainer {
+               // background-color: rgba(0, 0, 0, 0.4);
+               background-color: rgba(7, 37, 48, 0.6);
+               width: $infoContainerWidth;
+               margin: 90px 60px 90px 60px;
+               transition: height 3s;
+               // This "overflow" hides the text outside the Container
+               overflow: hidden;
+
+
+
+               .infoTitle {
+                    // font-family: 'Caveat Brush', cursive;
+                    font-family: 'Encode Sans', sans-serif;
+                    font-size: calc(#{$textFontSize} * 2.8);
+                    font-weight: 800;
+                    height: auto;
+                    padding: 12px;
+                    text-align: center;
+                    
+
+                    .infoSubTitle {
+                         // font-family: 'Caveat Brush', cursive;
+                         font-family: 'Encode Sans', sans-serif;
+                         font-size: calc(#{$textFontSize} * 2);
+                         font-weight: 400;
+                         height: auto;
+                         // padding: 40px;
+                         text-align: center;
+                    }
+               }
+
+               .borderedTitle{
+                    // border-top:1px solid white;
+                    border-bottom:1px solid white;
+                    margin:30px;
+               }
+
+               
+               #infoText {
+                    font-size: $textFontSize;
+                    font-weight: 100;
+                    padding: 30px;
+                    max-width: 80%;
+                    line-height:2.1rem
+                    // text-align: justify;
+               }
+          }
+
+          .showInfoContainer {
+               background-color: rgba(0, 0, 0, 0.4);
+               height: calc(#{$infoBarHeight} - 180px);
+          }
+
+          .hideInfoContainer {
+               height: 0px;
+          }
+
+          .textContainer {
+               background-color: rgba(0, 0, 0, 0.4);
+               width: calc(100% - #{$infoContainerWidth});
+               max-height: 5em;
+               padding: 30px;
+               margin: 90px 30px 90px 30px;
+          }
+     }
+}

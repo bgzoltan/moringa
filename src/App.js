@@ -1,23 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import React, { useState } from "react";
+import Landing from "./components/Landing";
+import Benefits from "./components/Benefits";
+import Ingredients from "./components/Ingredients";
+import Logo from "./img/moringa-logo.jpg";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <nav id="navigation">
+          <div id="logo">
+            <Link to="/">
+              <img src={Logo} alt="moringa logo" />
+            </Link>
+          </div>
+
+          <div id="navBar">
+            <Link className="menuLinks" to="/benefits">
+              Előnyök
+            </Link>
+
+            <Link className="menuLinks" to="/ingredients">
+              Tápanyagok
+            </Link>
+
+            <Link className="menuLinks" to="/menu3">
+              Vásárlás
+            </Link>
+
+            <Link className="menuLinks" to="/menu4">
+              Egyéb
+            </Link>
+          </div>
+        </nav>
+
+        <Switch>
+          <Route path="/" exact component={Landing} />
+          <Route path="/benefits" component={Benefits} />
+          <Route path="/ingredients" component={Ingredients} />
+          <Route path="/menu3" />
+          <Route path="/menu4" />
+        </Switch>
+      </Router>
     </div>
   );
 }
