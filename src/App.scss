@@ -1,12 +1,12 @@
 @import "./variables";
 // @import url("https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");/
 // @import url("https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Francois+One&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Signika+Negative:wght@300;400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Parisienne&family=Signika+Negative:wght@300;400;600;700&display=swap");
 // @import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@300;500;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans:wght@300;500;800&display=swap");
 @import "./ingredients";
 @import "./shop";
 body {
@@ -18,13 +18,13 @@ body {
      font-size: $textFontSize;
      color: $textColor;
      // font-family: "Comic Neue", cursive;
-     font-family: 'Encode Sans', sans-serif;
+     font-family: "Encode Sans", sans-serif;
      // font-family: 'Signika Negative', sans-serif;
 
-     .specialText{
-          font-family: 'Parisienne', cursive;
+     .specialText {
+          font-family: "Parisienne", cursive;
           font-size: calc(#{$textFontSize} * 2.6);
-          padding-left:30px;
+          padding-left: 30px;
      }
 }
 #navigation {
@@ -38,16 +38,66 @@ body {
      }
      #navBar {
           display: flex;
-          justify-content: flex-end;
+          position: fixed;
+          justify-content: center;
           align-items: flex-end;
           width: 100%;
-          margin-right: 50px;
+
           color: $navBarColor;
-          .menuLinks {
-               margin-left: 10px;
-               margin-right: 10px;
+          background-color: #cae287;
+          height: 105px;
+          z-index: 2;
+          .menuLinks,
+          .center {
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               text-align: center;
+               color: white;
+               background-color: #5d311a ;
+               width: 200px;
+               height: 60px;
+               text-decoration: none;
+               transition:margin;
+               transition-duration: 2s;
+            
+          }
+          .menuLinks:hover {
+               box-sizing: border-box;
+               cursor: pointer;
+               color: white;
+               border-left: 2px solid  #cae287;
+               border-right: 2px solid  #cae287;
                margin-bottom: 10px;
-               color: $navBarColor;
+                    }
+
+          .centerLink {
+               position: absolute;
+               top: -80px;
+               left: calc(50% - 150 px);
+               width: 220px;
+               height: 220px;
+
+               color: white;
+               background-color:   #cae287;
+               // background-color: white;
+               background-image: url("./img/moringa-logo.jpg");
+               background-position: center;
+               background-repeat: no-repeat;
+               background-size: 60%;
+
+               border-radius: 50%;
+               text-decoration: none;
+          }
+          .rightLink {
+               clip-path: polygon(100% 0%, 90% 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
+               background-image: linear-gradient(  to right, #5d311a 65% ,  #cae287);
+          }
+ 
+     
+          .leftLink {
+               clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 10% 50%, 0% 0%);
+               background-image: linear-gradient(  to left, #5d311a 65% ,  #cae287);
           }
      }
      #logo img {
@@ -110,33 +160,33 @@ section {
           background-repeat: no-repeat;
           background-position: center;
           background-size: cover;
- 
-          .benefitsHide{
-                  // BENEFITS hide with animation
-                  //  Hide is the default value of BENEFITS then it changes to SHOW depending on the scroll
-                  height: auto;
-                  padding: 30px;
-                  width: 30%;
-                  margin: 50px;
-                  background-color: rgba(0, 114, 152, 0.8);
 
-                  .animatedText {
+          .benefitsHide {
+               // BENEFITS hide with animation
+               //  Hide is the default value of BENEFITS then it changes to SHOW depending on the scroll
+               height: auto;
+               padding: 30px;
+               width: 30%;
+               margin: 50px;
+               background-color: rgba(0, 114, 152, 0.8);
+
+               .animatedText {
                     visibility: visible;
                     animation-duration: 3s;
                     animation-name: fadeOut;
                     animation-fill-mode: forwards;
 
                     @keyframes fadeOut {
-                        0% {
+                         0% {
                               opacity: 1;
                          }
                          100% {
-                              opacity:0;
+                              opacity: 0;
                          }
                     }
                }
           }
-           
+
           .benefitsShow {
                // BENEFITS appears with fade animation
                // "delay" means the passed time between delayed "li" text rows
@@ -149,7 +199,7 @@ section {
                .animatedText {
                     opacity: 0;
                     animation-duration: 2s;
-                    animation-name: fadeInLeft;                
+                    animation-name: fadeInLeft;
                     animation-fill-mode: forwards;
 
                     @keyframes fadeInLeft {
@@ -164,22 +214,20 @@ section {
                     }
                }
 
-               ul{
-                    li{
+               ul {
+                    li {
                          list-style: none;
                     }
                }
 
                .benefitsTitle {
-                    font-family: 'Signika Negative', sans-serif;
+                    font-family: "Signika Negative", sans-serif;
                     font-size: calc(#{$textFontSize} * 2.3);
                     font-weight: 700;
                     height: auto;
                     padding: 30px;
                }
 
-
-               
                //  DELAYS between "li" text rows
                .delay1 {
                     animation-delay: $textDelayStart;
@@ -262,7 +310,7 @@ section {
                     justify-content: center;
                     background-color: rgba(0, 114, 152, 0.8);
                     width: $featureBarHeight;
-                    height: calc( #{$featureBarHeight} - 20px );
+                    height: calc(#{$featureBarHeight} - 20px);
                     border: 1px solid;
                     // border-radius: 50%;
                     text-align: center;
@@ -284,21 +332,18 @@ section {
                // This "overflow" hides the text outside the Container
                overflow: hidden;
 
-
-
                .infoTitle {
                     // font-family: 'Caveat Brush', cursive;
-                    font-family: 'Encode Sans', sans-serif;
+                    font-family: "Encode Sans", sans-serif;
                     font-size: calc(#{$textFontSize} * 2.8);
                     font-weight: 800;
                     height: auto;
                     padding: 12px;
                     text-align: center;
-                    
 
                     .infoSubTitle {
                          // font-family: 'Caveat Brush', cursive;
-                         font-family: 'Encode Sans', sans-serif;
+                         font-family: "Encode Sans", sans-serif;
                          font-size: calc(#{$textFontSize} * 2);
                          font-weight: 400;
                          height: auto;
@@ -307,19 +352,18 @@ section {
                     }
                }
 
-               .borderedTitle{
+               .borderedTitle {
                     // border-top:1px solid white;
-                    border-bottom:1px solid white;
-                    margin:30px;
+                    border-bottom: 1px solid white;
+                    margin: 30px;
                }
 
-               
                #infoText {
                     font-size: $textFontSize;
                     font-weight: 100;
                     padding: 30px;
                     max-width: 80%;
-                    line-height:2.1rem
+                    line-height: 2.1rem;
                     // text-align: justify;
                }
           }

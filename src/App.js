@@ -19,21 +19,23 @@ function App() {
           </div>
 
           <div id="navBar">
-            <Link className="menuLinks" to="/benefits">
-              Előnyök
+            <Link className="menuLinks leftLink" to="/">
+              MORINGA
             </Link>
+
+            <Link className="menuLinks" to="/benefits">
+              MIÉRT JÓ
+            </Link>
+            <div className="center" />
 
             <Link className="menuLinks" to="/ingredients">
-              Tápanyagok
+              TÁPANYAGOK
             </Link>
 
-            <Link className="menuLinks" to="/shop">
-              Vásárlás
+            <Link className="menuLinks rightLink" to="/shop">
+              TERMÉKEK
             </Link>
-
-            <Link className="menuLinks" to="/menu4">
-              Egyéb
-            </Link>
+            <Link className="centerLink" to="/" />
           </div>
         </nav>
 

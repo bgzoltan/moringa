@@ -217,9 +217,9 @@ body {
   background-color: white;
   font-size: 23px;
   color: whitesmoke;
-  font-family: 'Encode Sans', sans-serif; }
+  font-family: "Encode Sans", sans-serif; }
   body .specialText {
-    font-family: 'Parisienne', cursive;
+    font-family: "Parisienne", cursive;
     font-size: calc(23px * 2.6);
     padding-left: 30px; }
 
@@ -233,16 +233,54 @@ body {
     width: 200px; }
   #navigation #navBar {
     display: flex;
-    justify-content: flex-end;
+    position: fixed;
+    justify-content: center;
     align-items: flex-end;
     width: 100%;
-    margin-right: 50px;
-    color: black; }
-    #navigation #navBar .menuLinks {
-      margin-left: 10px;
-      margin-right: 10px;
-      margin-bottom: 10px;
-      color: black; }
+    color: black;
+    background-color: #cae287;
+    height: 105px;
+    z-index: 2; }
+    #navigation #navBar .menuLinks,
+    #navigation #navBar .center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      background-color: #5d311a;
+      width: 200px;
+      height: 60px;
+      text-decoration: none;
+      transition: margin;
+      transition-duration: 2s; }
+    #navigation #navBar .menuLinks:hover {
+      box-sizing: border-box;
+      cursor: pointer;
+      color: white;
+      border-left: 2px solid  #cae287;
+      border-right: 2px solid  #cae287;
+      margin-bottom: 10px; }
+    #navigation #navBar .centerLink {
+      position: absolute;
+      top: -80px;
+      left: calc(50% - 150 px);
+      width: 220px;
+      height: 220px;
+      color: white;
+      background-color: #cae287;
+      background-image: url("./img/moringa-logo.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 60%;
+      border-radius: 50%;
+      text-decoration: none; }
+    #navigation #navBar .rightLink {
+      clip-path: polygon(100% 0%, 90% 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
+      background-image: linear-gradient(to right, #5d311a 65%, #cae287); }
+    #navigation #navBar .leftLink {
+      clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 10% 50%, 0% 0%);
+      background-image: linear-gradient(to left, #5d311a 65%, #cae287); }
   #navigation #logo img {
     height: 100px; }
 
@@ -325,7 +363,7 @@ section .bar9 {
     section .bar9 .benefitsShow ul li {
       list-style: none; }
     section .bar9 .benefitsShow .benefitsTitle {
-      font-family: 'Signika Negative', sans-serif;
+      font-family: "Signika Negative", sans-serif;
       font-size: calc(23px * 2.3);
       font-weight: 700;
       height: auto;
@@ -384,7 +422,7 @@ section .featureBar1 {
       justify-content: center;
       background-color: rgba(0, 114, 152, 0.8);
       width: calc(100vw / 5 - 40px);
-      height: calc( calc(100vw / 5 - 40px) - 20px );
+      height: calc(calc(100vw / 5 - 40px) - 20px);
       border: 1px solid;
       text-align: center; }
 section .info {
@@ -398,14 +436,14 @@ section .info {
     transition: height 3s;
     overflow: hidden; }
     section .info #infoContainer .infoTitle {
-      font-family: 'Encode Sans', sans-serif;
+      font-family: "Encode Sans", sans-serif;
       font-size: calc(23px * 2.8);
       font-weight: 800;
       height: auto;
       padding: 12px;
       text-align: center; }
       section .info #infoContainer .infoTitle .infoSubTitle {
-        font-family: 'Encode Sans', sans-serif;
+        font-family: "Encode Sans", sans-serif;
         font-size: calc(23px * 2);
         font-weight: 400;
         height: auto;
