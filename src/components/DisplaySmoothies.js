@@ -11,6 +11,7 @@ function DisplaySmoothies({
     setSelectedSmoothie(newSelectedSmoothie[0]);
   };
 
+  console.log(selectedSmoothie);
   return (
     <div className="productContainer">
       <div className="prBar">
@@ -46,6 +47,20 @@ function DisplaySmoothies({
                 <li>
                   {selectedSmoothie.use}
                 </li>
+                <li>
+                  {selectedSmoothie.cal}
+                </li>
+                <li>
+                  {selectedSmoothie.qty}
+                </li>
+                <li>
+                  {selectedSmoothie.qtyUse}
+                </li>
+                {selectedSmoothie.features.map(feature =>
+                  <button>
+                    {feature}
+                  </button>
+                )}
               </ul>
               <div className="prDetailsTitle"> Összetevők</div>
 

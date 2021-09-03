@@ -22,7 +22,11 @@ function IngredientsVitamins() {
           />
           <div className="ingredientsText">
             <h2>7x több C vitamin mint a narancsban</h2>
-            <p>A C vitamin</p>
+            <p>
+              A C vitamin testünk védelmi vonalának egyik legfontosabb segítője,
+              mert erős antioxidáns. Ezen túlmenően számos más pozitív hatása is
+              van. Ajánlott napi bevitel 75-90mg.
+            </p>
           </div>
           <div id="line" />
         </li>
@@ -38,7 +42,12 @@ function IngredientsVitamins() {
           />
           <div className="ingredientsText">
             <h2>4x több A vitamin, mint a sárgarépában</h2>
-            <p>A C vitamins</p>
+            <p>
+              Az A vitamin zsírban oldódó vitamin, a szem vitaminja, de fontos
+              az egészséges bőr, a haj, a csontok és a fogak fejlődéséhez is.
+              Különösen fontos a gyerekkori fejlődés során. Hiánya számos
+              betegséget okozhat. Túladagolása sárgasághoz vezethet.
+            </p>
           </div>
           <div id="line" />
         </li>
@@ -54,7 +63,14 @@ function IngredientsVitamins() {
           />
           <div className="ingredientsText">
             <h2>4x több kalcium és 2x több fehérje mint a tejben</h2>
-            <p>A C vitamins</p>
+            <p>
+              A kalcium rendkívül fontos a szervezetünknek, nem csupán a csontok
+              szilárdsága miatt, hanem mert szerepe van az idegrendszer és az
+              izmok működésében is, de még a véralvadásra is hatással van. A
+              fehérjék a testünk alapvető építőelemei. Minden sejtünk
+              működéséhez szükséges. Hiányában nem csupán izomgyengeség, de
+              egyéb betegségek is kialakulhatnak.
+            </p>
           </div>
           <div id="line" />
         </li>
@@ -71,7 +87,11 @@ function IngredientsVitamins() {
           />
           <div className="ingredientsText">
             <h2>3x több kálium, mint a banánban</h2>
-            <p>A C vitamins</p>
+            <p>
+              A Kálium a sejtek egészséges működéséhez nélkülözhetetlen. A
+              káliumbevitel csökkentheti a vérnyomást, a stroke kockázatát.
+              Hiányában izomgyengeség, zavartság, lehangoltság is kialakulhat.
+            </p>
           </div>
           <div id="line" />
         </li>
@@ -88,7 +108,12 @@ function IngredientsVitamins() {
           />
           <div className="ingredientsText">
             <h2>3x több E vitamin, mint a spenótban</h2>
-            <p>A C vitamins</p>
+            <p>
+              A E vitamin zsírban oldódó vitamin és jelentős antioxidáns. Nem
+              csupán a bőr, a haj egészség segíti elő, de számos testi
+              folyamatban részt vesz. Hiányában többek között száraz bőr, lassú
+              sebgyógyulás, visszértágulat is előfordulhat.{" "}
+            </p>
           </div>
           <div id="line" />
         </li>
@@ -105,7 +130,12 @@ function IngredientsVitamins() {
           />
           <div className="ingredientsText">
             <h2>3x több vas, mint a mandulában</h2>
-            <p>A C vitamins</p>
+            <p>
+              A vas, mint a vér hemoglobinjának alkotóeleme, fontos szerepet
+              játszik abban, hogy elegendő oxigént tudjon szálítani a vér a
+              testünk különböző részeibe. Hiánya gyengeséget, fejfájást, esetleg
+              fokozott szívdobogást, stb... okozhat.
+            </p>
           </div>
           <div id="line" />
         </li>

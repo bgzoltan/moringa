@@ -41,6 +41,14 @@ function DisplayTeas({ teas, selectedTea, setSelectedTea }) {
                 <li>
                   {selectedTea.use}
                 </li>
+                <li>
+                  {selectedTea.qty}
+                </li>
+                {selectedTea.features.map(feature =>
+                  <button>
+                    {feature}
+                  </button>
+                )}
               </ul>
               <div className="prDetailsTitle"> Összetevők</div>
 

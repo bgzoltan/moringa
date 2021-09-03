@@ -16,6 +16,7 @@
   #ingredientsContainer h1 {
     font-family: 'Encode Sans', sans-serif;
     color: #a6c945;
+    margin: 10px;
     font-size: calc(23px * 3.5);
     font-weight: 800; }
     #ingredientsContainer h1 .textHighl {
@@ -34,7 +35,7 @@
     margin: 0px; }
   #ingredientsContainer p {
     font-family: 'Encode Sans', sans-serif;
-    font-size: calc(23px * 1.1);
+    font-size: calc(23px * 0.9);
     font-weight: 400;
     color: whitesmoke;
     padding: 0px;
@@ -44,7 +45,10 @@
     height: auto;
     display: flex;
     justify-content: center;
-    background-color: #5a4134; }
+    background-color: #5a4134;
+    background-color: white;
+    background-image: url("./img/back.jpg");
+    background-position: center; }
   #ingredientsContainer #nutrients {
     height: 700px;
     width: 700px;
@@ -105,9 +109,11 @@
       margin: 20px 10px 20px 0px;
       border-radius: 9px; }
       #ingredientsContainer li .ingredientsText h2 {
-        color: white; }
+        color: #5d311a; }
       #ingredientsContainer li .ingredientsText p {
-        color: white; }
+        color: white;
+        font-weight: 300;
+        line-height: 1.3em; }
 
 #shopContainer {
   display: flex;
@@ -118,6 +124,7 @@
   height: 100%; }
   #shopContainer h1 {
     font-family: "Encode Sans", sans-serif;
+    margin: 10px;
     color: #a6c945;
     font-size: calc(23px * 3.5);
     font-weight: 800; }
@@ -137,11 +144,12 @@
 
 .prBar {
   display: flex;
-  color: black;
-  height: 800px;
+  color: #5d311a;
+  height: auto;
   width: 100%;
   background-color: white;
-  background-image: url("./img/back.jpg"); }
+  background-image: url("./img/back.jpg");
+  background-position: center; }
   .prBar .prLeftSide {
     width: 50%;
     display: flex;
@@ -174,13 +182,19 @@
         background-color: white; }
       .prBar #prRightSide .prInfoContainer .prDetails {
         padding-top: 10px;
-        font-size: 26px; }
+        font-size: 20px; }
         .prBar #prRightSide .prInfoContainer .prDetails .prDetailsTitle {
           color: #5d311a;
           padding-top: 20px;
           padding-bottom: 10px;
           font-size: 35px;
           font-weight: 600; }
+        .prBar #prRightSide .prInfoContainer .prDetails button {
+          font-size: 18px;
+          padding: 3px;
+          margin: 2px;
+          background-color: #a6c945;
+          border-radius: 5px; }
         .prBar #prRightSide .prInfoContainer .prDetails ul {
           margin: 0px; }
           .prBar #prRightSide .prInfoContainer .prDetails ul li {
