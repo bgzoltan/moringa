@@ -269,10 +269,11 @@ body {
       height: 220px;
       color: white;
       background-color: #cae287;
-      background-image: url("./img/moringa-logo.jpg");
-      background-position: center;
+      background-image: url("./img/moringalogo.png");
+      background-position: bottom;
       background-repeat: no-repeat;
-      background-size: 60%;
+      background-size: 35%;
+      background-position-y: 85px;
       border-radius: 50%;
       text-decoration: none; }
     #navigation #navBar .rightLink {
