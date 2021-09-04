@@ -21,7 +21,7 @@ function IngredientsVitamins() {
             }}
           />
           <div className="ingredientsText">
-            <h2>7x több C vitamin mint a narancsban</h2>
+            <h2>7x TÖBB C VITAMIN MINT A NARANCSBAN</h2>
             <p>
               A C vitamin testünk védelmi vonalának egyik legfontosabb segítője,
               mert erős antioxidáns. Ezen túlmenően számos más pozitív hatása is

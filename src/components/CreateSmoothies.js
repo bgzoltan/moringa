@@ -6,7 +6,7 @@ function CreateSmoothies() {
       this.type = "Moringa smoothie por Indiából";
       this.flavour = flavour;
       this.use =
-        "🌱 Tápanyagokban gazdag, édes, de alacsony kalóriatartalmú étrendkiegészítő. Gyorsan elkészíthető. Keverje bele joghurtba, készítsen lattét ☕️ vagy turmixot 🥤tejjel vagy tejhelyettesítővel 🥥!";
+        "Tápanyagokban gazdag, édes, de alacsony kalóriatartalmú étrendkiegészítő. Gyorsan elkészíthető. Keverje bele joghurtba, készítsen lattét vagy turmixot tejjel vagy tejhelyettesítővel !";
       this.cal = cal;
       this.qty = "100 gramm";
       this.qtyUse = "6-10 gramm /adag";

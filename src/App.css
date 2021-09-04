@@ -1,8 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Parisienne&family=Signika+Negative:wght@300;400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Encode+Sans:wght@300;500;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cuprum:wght@400;600;700&display=swap");
 #ingredientsContainer {
   display: flex;
   justify-content: center;
@@ -12,13 +11,14 @@
   height: 100%;
   font-size: 23px;
   color: whitesmoke;
-  font-family: 'Encode Sans', sans-serif; }
+  font-family: 'Cuprum', sans-serif; }
   #ingredientsContainer h1 {
-    font-family: 'Encode Sans', sans-serif;
+    font-family: 'Cuprum', sans-serif;
+    font-weight: 700;
     color: #a6c945;
-    margin: 10px;
-    font-size: calc(23px * 3.5);
-    font-weight: 800; }
+    margin: 50px;
+    margin-bottom: 0px;
+    font-size: calc(23px * 3.5); }
     #ingredientsContainer h1 .textHighl {
       color: #5d311a; }
   #ingredientsContainer #ingredientsTitleText {
@@ -27,15 +27,17 @@
     font-weight: 400;
     padding: 5px; }
   #ingredientsContainer h2 {
-    font-family: 'Encode Sans', sans-serif;
+    font-family: 'Cuprum', sans-serif;
+    font-weight: 500;
     font-size: calc(23px * 1.2);
     font-weight: 500;
     color: whitesmoke;
     padding: 0px;
     margin: 0px; }
   #ingredientsContainer p {
-    font-family: 'Encode Sans', sans-serif;
-    font-size: calc(23px * 0.9);
+    font-family: 'Cuprum', sans-serif;
+    font-weight: 400;
+    font-size: calc(23px * );
     font-weight: 400;
     color: whitesmoke;
     padding: 0px;
@@ -56,7 +58,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     font-size: 23px;
-    font-family: 'Encode Sans', sans-serif; }
+    font-family: 'Cuprum', sans-serif; }
     #ingredientsContainer #nutrients .nutrientBox {
       display: flex;
       flex-direction: column;
@@ -101,7 +103,7 @@
     #ingredientsContainer li .ingredientsText {
       font-size: 23px;
       color: whitesmoke;
-      font-family: 'Encode Sans', sans-serif;
+      font-family: 'Cuprum', sans-serif;
       max-width: 600px;
       color: white;
       background-color: #108ba7;
@@ -123,8 +125,9 @@
   width: 100%;
   height: 100%; }
   #shopContainer h1 {
-    font-family: "Encode Sans", sans-serif;
-    margin: 10px;
+    font-family: "Cuprum", sans-serif;
+    margin-top: 50px;
+    margin-bottom: 0px;
     color: #a6c945;
     font-size: calc(23px * 3.5);
     font-weight: 800; }
@@ -140,7 +143,7 @@
   height: 100%;
   font-size: 23px;
   color: whitesmoke;
-  font-family: "Encode Sans", sans-serif; }
+  font-weight: 700; }
 
 .prBar {
   display: flex;
@@ -176,6 +179,7 @@
       .prBar #prRightSide .prInfoContainer .prSelect {
         font-size: 30px;
         font-weight: 400;
+        font-family: "Cuprum", sans-serif;
         padding-top: 5px;
         padding-bottom: 5px;
         border-radius: 9px;
@@ -190,6 +194,7 @@
           font-size: 35px;
           font-weight: 600; }
         .prBar #prRightSide .prInfoContainer .prDetails button {
+          font-family: 'Cuprum', sans-serif;
           font-size: 18px;
           padding: 3px;
           margin: 2px;
@@ -202,6 +207,9 @@
             font-weight: 300;
             color: #555454;
             padding: 2px; }
+        .prBar #prRightSide .prInfoContainer .prDetails .buttonShop {
+          margin-left: 20px;
+          margin-top: 20px; }
   .prBar #prSmoothie {
     color: black;
     height: 800px;
@@ -217,257 +225,282 @@ body {
   background-color: white;
   font-size: 23px;
   color: whitesmoke;
-  font-family: "Encode Sans", sans-serif; }
+  font-family: "Cuprum", sans-serif; }
   body .specialText {
     font-family: "Parisienne", cursive;
     font-size: calc(23px * 2.6);
     padding-left: 30px; }
-
-#navigation {
-  width: 100vw;
-  height: 100px;
-  display: flex;
-  flex-direction: row;
-  background-color: white; }
-  #navigation #logo {
-    width: 200px; }
-  #navigation #navBar {
+  body #navigation {
+    width: 100vw;
+    height: 100px;
     display: flex;
-    position: fixed;
-    justify-content: center;
-    align-items: flex-end;
-    width: 100%;
-    color: black;
-    background-color: #cae287;
-    height: 105px;
-    z-index: 2; }
-    #navigation #navBar .menuLinks,
-    #navigation #navBar .center {
+    flex-direction: row;
+    background-color: white; }
+    body #navigation #logo {
+      width: 200px; }
+    body #navigation #navBar {
       display: flex;
-      align-items: center;
+      position: fixed;
       justify-content: center;
-      text-align: center;
-      color: white;
-      background-color: #5d311a;
-      width: 200px;
-      height: 60px;
-      text-decoration: none;
-      transition: margin;
-      transition-duration: 2s; }
-    #navigation #navBar .menuLinks:hover {
-      box-sizing: border-box;
-      cursor: pointer;
-      color: white;
-      border-left: 2px solid  #cae287;
-      border-right: 2px solid  #cae287;
-      margin-bottom: 10px; }
-    #navigation #navBar .centerLink {
-      position: absolute;
-      top: -80px;
-      left: calc(50% - 150 px);
-      width: 220px;
-      height: 220px;
-      color: white;
+      align-items: flex-end;
+      width: 100%;
+      color: black;
       background-color: #cae287;
-      background-image: url("./img/moringalogo.png");
-      background-position: bottom;
-      background-repeat: no-repeat;
-      background-size: 35%;
-      background-position-y: 85px;
-      border-radius: 50%;
-      text-decoration: none; }
-    #navigation #navBar .rightLink {
-      clip-path: polygon(100% 0%, 90% 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
-      background-image: linear-gradient(to right, #5d311a 65%, #cae287); }
-    #navigation #navBar .leftLink {
-      clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 10% 50%, 0% 0%);
-      background-image: linear-gradient(to left, #5d311a 65%, #cae287); }
-  #navigation #logo img {
-    height: 100px; }
-
-section .bar1 {
-  display: flex;
-  justify-content: flex-start;
-  background-image: url("./img/moringa1.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; }
-section .bar2 {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  background-image: url("./img/moringa3.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; }
-section .bar3 {
-  display: flex;
-  justify-content: flex-start;
-  background-image: url("./img/moringa2.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; }
-section .bar7 {
-  display: flex;
-  justify-content: flex-start;
-  background-image: url("./img/moringa7.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; }
-section .bar8 {
-  display: flex;
-  justify-content: flex-end;
-  background-image: url("./img/moringa8.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; }
-section .bar9 {
-  display: flex;
-  justify-content: flex-start;
-  background-image: url("./img/moringa9.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; }
-  section .bar9 .benefitsHide {
-    height: auto;
-    padding: 30px;
-    width: 30%;
-    margin: 50px;
-    background-color: rgba(0, 114, 152, 0.8); }
-    section .bar9 .benefitsHide .animatedText {
-      visibility: visible;
-      animation-duration: 3s;
-      animation-name: fadeOut;
-      animation-fill-mode: forwards; }
+      height: 105px;
+      z-index: 2; }
+      body #navigation #navBar .menuLinks,
+      body #navigation #navBar .center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        background-color: #5d311a;
+        width: 200px;
+        height: 60px;
+        text-decoration: none;
+        transition: margin;
+        transition-duration: 2s; }
+      body #navigation #navBar .menuLinks:hover {
+        box-sizing: border-box;
+        cursor: pointer;
+        color: white;
+        border-left: 2px solid #cae287;
+        border-right: 2px solid #cae287;
+        margin-bottom: 10px; }
+      body #navigation #navBar .centerLink {
+        position: absolute;
+        top: -80px;
+        left: calc(50% - 150 px);
+        width: 220px;
+        height: 220px;
+        color: white;
+        background-color: #cae287;
+        background-image: url("./img/moringalogo.png");
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: 35%;
+        background-position-y: 85px;
+        border-radius: 50%;
+        text-decoration: none; }
+      body #navigation #navBar .rightLink {
+        clip-path: polygon(100% 0%, 90% 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
+        background-image: linear-gradient(to right, #5d311a 65%, #cae287); }
+      body #navigation #navBar .leftLink {
+        clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 10% 50%, 0% 0%);
+        background-image: linear-gradient(to left, #5d311a 65%, #cae287); }
+    body #navigation #logo img {
+      height: 100px; }
+  body section .bar1 {
+    display: flex;
+    justify-content: flex-start;
+    background-image: url("./img/moringa1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; }
+  body section .bar2 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    background-image: url("./img/moringa3.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; }
+  body section .bar3 {
+    display: flex;
+    justify-content: flex-start;
+    background-image: url("./img/moringa2.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; }
+  body section .bar7 {
+    display: flex;
+    justify-content: flex-start;
+    background-image: url("./img/moringa7.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; }
+  body section .bar8 {
+    display: flex;
+    justify-content: flex-end;
+    background-image: url("./img/moringa8.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; }
+  body section .bar9 {
+    display: flex;
+    justify-content: flex-start;
+    background-image: url("./img/moringa9.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; }
+    body section .bar9 .benefitsHide {
+      height: auto;
+      padding: 30px;
+      width: 30%;
+      margin: 50px;
+      background-color: rgba(0, 114, 152, 0.8); }
+      body section .bar9 .benefitsHide .animatedText {
+        visibility: visible;
+        animation-duration: 3s;
+        animation-name: fadeOut;
+        animation-fill-mode: forwards; }
 @keyframes fadeOut {
   0% {
     opacity: 1; }
   100% {
     opacity: 0; } }
-  section .bar9 .benefitsShow {
-    height: auto;
-    padding: 30px;
-    width: 30%;
-    margin: 50px;
-    background-color: rgba(7, 37, 48, 0.6); }
-    section .bar9 .benefitsShow .animatedText {
-      opacity: 0;
-      animation-duration: 2s;
-      animation-name: fadeInLeft;
-      animation-fill-mode: forwards; }
+    body section .bar9 .benefitsShow {
+      height: auto;
+      padding: 30px;
+      width: 30%;
+      margin: 50px;
+      background-color: rgba(7, 37, 48, 0.6); }
+      body section .bar9 .benefitsShow .animatedText {
+        opacity: 0;
+        animation-duration: 2s;
+        animation-name: fadeInLeft;
+        animation-fill-mode: forwards; }
 @keyframes fadeInLeft {
   0% {
     transform: translate3d(-35px, 0, 0); }
   100% {
     opacity: 1;
     transform: translate3d(0, 0, 0); } }
-    section .bar9 .benefitsShow ul li {
-      list-style: none; }
-    section .bar9 .benefitsShow .benefitsTitle {
-      font-family: "Signika Negative", sans-serif;
-      font-size: calc(23px * 2.3);
-      font-weight: 700;
-      height: auto;
-      padding: 30px; }
-    section .bar9 .benefitsShow .delay1 {
-      animation-delay: 0.3s; }
-    section .bar9 .benefitsShow .delay2 {
-      animation-delay: calc(0.3s + 0.3s * 1); }
-    section .bar9 .benefitsShow .delay3 {
-      animation-delay: calc(0.3s + 0.3s * 2); }
-    section .bar9 .benefitsShow .delay4 {
-      animation-delay: calc(0.3s + 0.3s * 3); }
-    section .bar9 .benefitsShow .delay5 {
-      animation-delay: calc(0.3s + 0.3s * 4); }
-    section .bar9 .benefitsShow .delay6 {
-      animation-delay: calc(0.3s + 0.3s * 5); }
-    section .bar9 .benefitsShow .delay7 {
-      animation-delay: calc(0.3s + 0.3s * 6); }
-    section .bar9 .benefitsShow .delay8 {
-      animation-delay: calc(0.3s + 0.3s * 7); }
-    section .bar9 .benefitsShow .delay9 {
-      animation-delay: calc(0.3s + 0.3s * 8); }
-    section .bar9 .benefitsShow .delay10 {
-      animation-delay: calc(0.3s + 0.3s * 9); }
-    section .bar9 .benefitsShow .delay11 {
-      animation-delay: calc(0.3s + 0.3s * 10); }
-section .bar10 {
-  display: flex;
-  justify-content: flex-end;
-  background-image: url("./img/moringa10.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; }
-section .feature {
-  height: auto;
-  width: 100vw;
-  border: 1px solid; }
-section .featureBar1 {
-  display: flex;
-  flex-direction: column;
-  color: black; }
-  section .featureBar1 .featureTitle {
-    text-align: center;
-    font-size: calc(23px * 2);
-    font-weight: 700; }
-  section .featureBar1 .featureColumns {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    height: calc(100vw / 5 - 40px); }
-    section .featureBar1 .featureColumns .feature1 {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-      justify-content: center;
-      background-color: rgba(0, 114, 152, 0.8);
-      width: calc(100vw / 5 - 40px);
-      height: calc(calc(100vw / 5 - 40px) - 20px);
-      border: 1px solid;
-      text-align: center; }
-section .info {
-  height: 800px;
-  width: 100vw;
-  border: 1px solid; }
-  section .info #infoContainer {
-    background-color: rgba(7, 37, 48, 0.6);
-    width: 600px;
-    margin: 90px 60px 90px 60px;
-    transition: height 3s;
-    overflow: hidden; }
-    section .info #infoContainer .infoTitle {
-      font-family: "Encode Sans", sans-serif;
-      font-size: calc(23px * 2.8);
-      font-weight: 800;
-      height: auto;
-      padding: 12px;
-      text-align: center; }
-      section .info #infoContainer .infoTitle .infoSubTitle {
-        font-family: "Encode Sans", sans-serif;
-        font-size: calc(23px * 2);
-        font-weight: 400;
+      body section .bar9 .benefitsShow ul li {
+        list-style: none; }
+      body section .bar9 .benefitsShow .benefitsTitle {
+        font-family: "Cuprum", sans-serif;
+        font-size: calc(23px * 2.3);
+        font-weight: 700;
         height: auto;
+        padding: 30px; }
+      body section .bar9 .benefitsShow .delay1 {
+        animation-delay: 0.3s; }
+      body section .bar9 .benefitsShow .delay2 {
+        animation-delay: calc(0.3s + 0.3s * 1); }
+      body section .bar9 .benefitsShow .delay3 {
+        animation-delay: calc(0.3s + 0.3s * 2); }
+      body section .bar9 .benefitsShow .delay4 {
+        animation-delay: calc(0.3s + 0.3s * 3); }
+      body section .bar9 .benefitsShow .delay5 {
+        animation-delay: calc(0.3s + 0.3s * 4); }
+      body section .bar9 .benefitsShow .delay6 {
+        animation-delay: calc(0.3s + 0.3s * 5); }
+      body section .bar9 .benefitsShow .delay7 {
+        animation-delay: calc(0.3s + 0.3s * 6); }
+      body section .bar9 .benefitsShow .delay8 {
+        animation-delay: calc(0.3s + 0.3s * 7); }
+      body section .bar9 .benefitsShow .delay9 {
+        animation-delay: calc(0.3s + 0.3s * 8); }
+      body section .bar9 .benefitsShow .delay10 {
+        animation-delay: calc(0.3s + 0.3s * 9); }
+      body section .bar9 .benefitsShow .delay11 {
+        animation-delay: calc(0.3s + 0.3s * 10); }
+  body section .bar10 {
+    display: flex;
+    justify-content: flex-end;
+    background-image: url("./img/moringa10.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; }
+  body section .feature {
+    height: auto;
+    width: 100vw;
+    border: 1px solid; }
+  body section .featureBar1 {
+    display: flex;
+    flex-direction: column;
+    color: black; }
+    body section .featureBar1 .featureTitle {
+      text-align: center;
+      font-size: calc(23px * 2);
+      font-weight: 700; }
+    body section .featureBar1 .featureColumns {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      height: calc(100vw / 5 - 40px); }
+      body section .featureBar1 .featureColumns .feature1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        justify-content: center;
+        background-color: rgba(0, 114, 152, 0.8);
+        width: calc(100vw / 5 - 40px);
+        height: calc(calc(100vw / 5 - 40px) - 20px);
+        border: 1px solid;
         text-align: center; }
-    section .info #infoContainer .borderedTitle {
-      border-bottom: 1px solid white;
-      margin: 30px; }
-    section .info #infoContainer #infoText {
-      font-size: 23px;
-      font-weight: 100;
+  body section .info {
+    height: 800px;
+    width: 100vw;
+    border: 1px solid; }
+    body section .info #infoContainer {
+      background-color: rgba(7, 37, 48, 0.6);
+      width: 600px;
+      margin: 90px 60px 90px 60px;
+      transition: height 1.5s;
+      transition-timing-function: ease-out-in;
+      overflow: hidden; }
+      body section .info #infoContainer .infoTitle {
+        font-family: "Cuprum", sans-serif;
+        font-size: calc(23px * 2.8);
+        font-weight: 700;
+        height: auto;
+        padding: 12px;
+        text-align: center; }
+        body section .info #infoContainer .infoTitle .infoSubTitle {
+          font-size: calc(23px * 2);
+          font-weight: 400;
+          height: auto;
+          text-align: center; }
+      body section .info #infoContainer .borderedTitle {
+        border-bottom: 1px solid white;
+        margin: 30px; }
+      body section .info #infoContainer #infoText {
+        font-size: 23px;
+        font-weight: 100;
+        padding: 30px;
+        max-width: 80%;
+        line-height: 2.1rem; }
+    body section .info .showInfoContainer {
+      background-color: rgba(0, 0, 0, 0.4);
+      height: calc(800px - 180px); }
+    body section .info .hideInfoContainer {
+      height: 0px; }
+    body section .info .textContainer {
+      background-color: rgba(0, 0, 0, 0.4);
+      width: calc(100% - 600px);
+      max-height: 5em;
       padding: 30px;
-      max-width: 80%;
-      line-height: 2.1rem; }
-  section .info .showInfoContainer {
-    background-color: rgba(0, 0, 0, 0.4);
-    height: calc(800px - 180px); }
-  section .info .hideInfoContainer {
-    height: 0px; }
-  section .info .textContainer {
-    background-color: rgba(0, 0, 0, 0.4);
-    width: calc(100% - 600px);
-    max-height: 5em;
-    padding: 30px;
-    margin: 90px 30px 90px 30px; }
+      margin: 90px 30px 90px 30px; }
+  body .buttonLink {
+    display: block;
+    text-align: center;
+    font-size: 23px;
+    color: whitesmoke;
+    font-family: "Cuprum", sans-serif;
+    background-color: #5d311a;
+    width: 200px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 9px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color  background-color border;
+    transition-duration: 1s; }
+  body .buttonFurther {
+    margin-left: 30px; }
+  body .buttonLink:hover {
+    box-sizing: border-box;
+    color: black;
+    border: 3px solid  #5d311a;
+    background-color: #cae287; }
+
+.buttonShop {
+  margin-left: 20px;
+  color: chartreuse;
+  margin-top: 50px; }
 
 /*# sourceMappingURL=App.css.map */

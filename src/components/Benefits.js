@@ -8,7 +8,9 @@ function Benefits() {
   const [cNBar8Container, setBar8Container] = useState("hideInfoContainer");
   const [cNBar10Container, setBar10Container] = useState("hideInfoContainer");
   const [cNBenefits, setcNBenefits] = useState("benefitsHide");
-
+  const [isStart, setIsStart] = useState(true);
+  const infoBarHeight = 800;
+  const navBarHeight = 105;
   // This function handles which bar's DIV start to move depending on the scroll position
 
   function moveIt() {
@@ -16,7 +18,6 @@ function Benefits() {
 
     // Setting up the classes of bars depending on the scroll position
     console.log(Math.abs(appDiv.getBoundingClientRect().top));
-    let infoBarHeight = 800;
 
     if (Math.abs(appDiv.getBoundingClientRect().top) <= 0) {
       setBar7Container("showInfoContainer");
@@ -48,6 +49,14 @@ function Benefits() {
     }
   }
 
+  // To create a delay of displaying infoBa1 during the start
+  if (isStart) {
+    setBar7Container("hideInfoContainer");
+    setIsStart(false);
+    setTimeout(() => {
+      setBar7Container("showInfoContainer");
+    }, 500);
+  }
   window.onscroll = moveIt;
 
   return (
@@ -63,11 +72,12 @@ function Benefits() {
             <div id="infoText">
               Az egészséges, erős testhez szükséged van rengeteg tápanyagra,
               azaz fehérjékre, zsírokra, szénhidrátokra, ásványi anyagokra,
-              vitaminokra és nyomelemekre. A Moringa Oleifera - rendkívüli módon
-              -, 90 féle tápanyagot tartalmaz. Köztük 46 féle antioxidánst, 18
-              féle aminosavat, ABCE vitaminokat, különféle ásványi anyagokat,
-              nyomelemeket és sok rostot. Nem véletlenül használják pl.
-              alultáplált gyerekek étrendjének a kiegészítésére Afrikban.
+              vitaminokra és nyomelemekre. A modern életformánk ezt többnyire
+              nem biztosítja, mert nem táplálkozunk elég változatosan és jó
+              minőségben. A Moringa Oleifera - rendkívüli módon -, 90 féle
+              tápanyagot tartalmaz. Köztük 46 féle antioxidánst, 20 féle
+              aminosavat, ABCE vitaminokat, különféle ásványi anyagokat,
+              nyomelemeket és sok rostot.
             </div>
           </div>
           {/* <div className="textContainer">

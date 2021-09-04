@@ -2,45 +2,57 @@ import React, { useState } from "react";
 
 function Landing() {
   // States to control the moving DIV of bar1...bar4
-  const [cNBar1Container, setBar1Container] = useState("hideContainer");
-  const [cNBar2Container, setBar2Container] = useState("hideContainer");
-  const [cNBar3Container, setBar3Container] = useState("hideContainer");
+  const [cNBar1Container, setBar1Container] = useState("hideInfoContainer");
+  const [cNBar2Container, setBar2Container] = useState("hideInfoContainer");
+  const [cNBar3Container, setBar3Container] = useState("hideInfoContainer");
+  const [isStart, setIsStart] = useState(true);
+  const infoBarHeight = 800;
+  const navBarHeight = 105;
 
   // This function handles which bar's DIV start to move depending on the scroll position
   function moveIt() {
     const appDiv = document.querySelector(".App");
-    let infoBarHeight = 800;
-    let navBarHeigth = 100;
-    // Setting up the classes of bars depending on the scroll position
-    if (
-      Math.abs(appDiv.getBoundingClientRect().top) <=
-      navBarHeigth + infoBarHeight / 2
-    ) {
+
+    // Setting up the classNames of bars depending on the scroll position
+    console.log("Top", appDiv.getBoundingClientRect().top);
+    if (appDiv.getBoundingClientRect().top <= 0) {
       setBar1Container("showInfoContainer");
       setBar2Container("hideInfoContainer");
       setBar3Container("hideInfoContainer");
     }
+    console.log(navBarHeight);
+    console.log("Val1", navBarHeight + infoBarHeight * 0.5);
+    console.log("Val2", navBarHeight + infoBarHeight * 2.5);
     if (
-      Math.abs(appDiv.getBoundingClientRect().top) >
-        navBarHeigth + infoBarHeight / 2 &&
-      Math.abs(appDiv.getBoundingClientRect().top) <=
-        infoBarHeight + navBarHeigth
+      appDiv.getBoundingClientRect().top <=
+        (infoBarHeight * 0.5 + navBarHeight) * -1 &&
+      appDiv.getBoundingClientRect().top >=
+        (infoBarHeight * 2.2 + navBarHeight) * -1
     ) {
       setBar1Container("hideInfoContainer");
       setBar2Container("showInfoContainer");
       setBar3Container("hideInfoContainer");
     }
+
     if (
       Math.abs(appDiv.getBoundingClientRect().top) >
-        infoBarHeight + navBarHeigth &&
-      Math.abs(appDiv.getBoundingClientRect().top) <=
-        infoBarHeight * 2 + navBarHeigth
+        infoBarHeight + navBarHeight &&
+      appDiv.getBoundingClientRect().top <=
+        (infoBarHeight * 1.5 + navBarHeight) * -1
     ) {
-      setBar3Container("showInfoContainer");
       setBar2Container("hideInfoContainer");
+      setBar3Container("showInfoContainer");
     }
   }
-
+  console.log("Height", -1 * (infoBarHeight * 2 + navBarHeight));
+  // To create a delay of displaying infoBa1 during the start
+  if (isStart) {
+    setBar1Container("hideInfoContainer");
+    setIsStart(false);
+    setTimeout(() => {
+      setBar1Container("showInfoContainer");
+    }, 500);
+  }
   window.onscroll = moveIt;
 
   return (
@@ -56,14 +68,13 @@ function Landing() {
 
             {/* <span className="specialText">Fenyegetések</span> */}
             <div id="infoText">
-              Az egészségünket folyamatosan támadások érik. Ezek részben a
-              környzetünk hatásai, mint pédául a Nap UV sugárzása. Másik
-              részüket mi, emberek hoztuk létre. Ilyenek például a szennyezett
-              levegő, a talaj és víz. Egészségünket és öregedési folyamatainkat
-              a fenyegető szabad gyökök, a kialakuló oxidatív stressz és a
-              gyulladások jelentősen befolyásolják. Akár súlyos betegségeket is
-              előídézhetnek.
-              {/* <button>További információ</button> */}
+              Testünket folyamatosan bombázzák külső hatások. Ilyenek pédául a
+              Nap UV sugárzása, vagy a baktériumok, vírusok, de ilyenek az
+              emberi tevékenység olyan következményei is, mint a vegyianyagokkal
+              szennyezett levegő, a talaj és a víz vagy a különféle
+              élelmiszeripari adalékanyagok. <br />Egészségünket és
+              életartalmunkat ezek a negatív hatások erőteljesen képesek
+              befolyásolni. <br />Segíts magadon és ne várd meg, amíg baj lesz!
             </div>
           </div>
           {/* <div className="textContainer">
@@ -86,15 +97,15 @@ function Landing() {
 
           <div id="infoContainer" className={cNBar2Container}>
             <div className="infoTitle borderedTitle specialText">
-              Készítsd fel
+              VÉDD MEG
               <div className="infoSubTitle">a testedet !</div>
             </div>
             <div id="infoText">
               Ez a sok negatív hatás túlterhelheti a testedet és kialakulhat az
               oxidatív stressz állapota valamint különféle krónikus gyulladások.
               A tested ugyan erőteljes védelmi vonallal rendelkezik ezeknek a
-              fenyegetéseknek a leküzdésére, de van, hogy ez nem elegendő és
-              segítened kell. Megfelelő táplálkozással és sok mozgással
+              fenyegetéseknek a leküzdésére, de van, hogy ez nem elegendő és be
+              kell avatkoznod. <br />Egészséges táplálkozással és sok mozgással
               felkészítheted magad és jelentősen megnövelheted a tested
               ellenálló képességét.
             </div>
@@ -105,20 +116,22 @@ function Landing() {
         <div className="info bar3">
           <div id="infoContainer" className={cNBar3Container}>
             <div className="infoTitle borderedTitle specialText">
-              ISMERD MEG
+              FEDEZD FEL
               <div className="infoSubTitle">a csodafát !</div>
             </div>
             {/* <span className="specialText">Moringa, a csodafa</span> */}
             <div id="infoText">
-              A Moringa Oleifera, ez az Indiában őshonos fa segíthet neked is,
-              mert több hasznos összetevőt tartalmaz, mint bármely más ismert
-              növény a földön. Az ősi indiai orvoslás 300 féle betegség
-              megelőzésére vagy kezelésére használta. A fa különböző részeit -
-              levél, virág, kéreg, gyökér -, ma is mind felhasználják a
-              hagyományos orvoslásban, valamint italok, ételek és kozmetikumok
-              készítésére.
+              A Moringa Oleifera, ez az Indiában őshonos fa akár segíthet neked
+              is. Több tápanyagot tartalmaz, mint bármely más ismert növény a
+              földön. Az ősi indiai orvoslás 300 féle betegség megelőzésére vagy
+              kezelésére használta. A fa különböző részeit - levél, virág,
+              kéreg, gyökér -, ma is mind felhasználják a hagyományos
+              orvoslásban.
             </div>
-            <button>Tudj meg többet</button>
+
+            <a className="buttonLink buttonFurther" href="/benefits">
+              MIÉRT JÓ
+            </a>
           </div>
           {/* <div className="textContainer">
             Számos néven ismert, mint pl. "Miracle Tree", "HorseRadish Tree",

@@ -59,6 +59,12 @@ function DisplayTeas({ teas, selectedTea, setSelectedTea }) {
                   </li>
                 )}
               </ul>
+              <a
+                className="buttonLink buttonShop"
+                href="https://okosbazar.hu/collections/indiai-bio-moringa-es-tulsi-teak"
+              >
+                IRÁNY A BOLT
+              </a>
             </div>
           </div>
         </div>

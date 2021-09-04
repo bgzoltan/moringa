@@ -7,14 +7,16 @@
   height: 100%;
   font-size: $textFontSize;
   color: $textColor;
-  font-family: 'Encode Sans', sans-serif;
+  font-family: 'Cuprum', sans-serif;
 
   h1 {
-    font-family: 'Encode Sans', sans-serif;
+    font-family: 'Cuprum', sans-serif;
+    font-weight: 700;
     color: $textColorHead;
-    margin:10px;
+    margin:50px;
+    margin-bottom:0px;
     font-size: calc(#{$textFontSize} * 3.5);
-    font-weight: 800;
+
     .textHighl{
       color : $textColorHeadHighl;
     }
@@ -28,8 +30,8 @@
   }
 
   h2 {
-    // font-family: 'Caveat Brush', cursive;
-    font-family: 'Encode Sans', sans-serif;
+    font-family: 'Cuprum', sans-serif;
+    font-weight: 500;
     font-size: calc(#{$textFontSize} * 1.2);
     font-weight: 500;
     color: $textColor;
@@ -38,8 +40,9 @@
   }
 
   p {
-    font-family: 'Encode Sans', sans-serif;
-    font-size: calc(#{$textFontSize} * 0.9);
+    font-family: 'Cuprum', sans-serif;
+    font-weight: 400;
+    font-size: calc(#{$textFontSize} * );
     font-weight: 400;
     color: $textColor;
     padding: 0px;
@@ -64,7 +67,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     font-size: $textFontSize;
-    font-family: 'Encode Sans', sans-serif;
+    font-family: 'Cuprum', sans-serif;
 
     .nutrientBox {
       display: flex;
@@ -127,7 +130,7 @@
     .ingredientsText {
       font-size: $textFontSize;
       color: $textColor;
-      font-family: 'Encode Sans', sans-serif;
+      font-family: 'Cuprum', sans-serif;
       max-width: 600px;
       color: $graphColorLight;
       background-color: $graphColorDarkBcgr;

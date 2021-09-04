@@ -71,6 +71,12 @@ function DisplaySmoothies({
                   </li>
                 )}
               </ul>
+              <a
+                className="buttonLink buttonShop"
+                href="https://okosbazar.hu/collections/moringa-smoothie-porok"
+              >
+                IRÁNY A BOLT
+              </a>
             </div>
           </div>
         </div>

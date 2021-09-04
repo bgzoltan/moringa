@@ -7,8 +7,9 @@
      height: 100%;
 
      h1 {
-          font-family: "Encode Sans", sans-serif;
-          margin:10px;
+         font-family: $normalFontFamily;
+          margin-top:50px;
+          margin-bottom:0px;
           color: $textColorHead;
           font-size: calc(#{$textFontSize} * 3.5);
           font-weight: 800;
@@ -29,10 +30,11 @@
      height: 100%;
      font-size: $textFontSize;
      color: $textColor;
-     font-family: "Encode Sans", sans-serif;
+     font-weight: 700;
+   
 }
 .prBar {
-     display: flex;
+      display: flex;
      color: #5d311a;
      height: auto;
      width: 100%;
@@ -72,6 +74,7 @@
                .prSelect {
                     font-size: 30px;
                     font-weight: $textFontWeight;
+                    font-family: $normalFontFamily;
                     padding-top: 5px;
                     padding-bottom: 5px;
                     border-radius: 9px;
@@ -91,12 +94,15 @@
                     }
 
                     button{
+                         font-family: 'Cuprum', sans-serif;
                          font-size: 18px;;
                          padding: 3px;
                          margin:2px;
                          background-color:#a6c945 ;
                          border-radius: 5px;
                     }
+
+
                     ul {
                          margin: 0px;
                          li {
@@ -105,6 +111,11 @@
                               color: rgb(85, 84, 84);
                               padding: 2px;
                          }
+                    }
+
+                    .buttonShop{
+                         margin-left: 20px;
+                         margin-top:20px;
                     }
                }
           }
