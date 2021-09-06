@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Footer from "./Footer";
 
 function Landing() {
   // States to control the moving DIV of bar1...bar4
@@ -20,9 +21,6 @@ function Landing() {
       setBar2Container("hideInfoContainer");
       setBar3Container("hideInfoContainer");
     }
-    console.log(navBarHeight);
-    console.log("Val1", navBarHeight + infoBarHeight * 0.5);
-    console.log("Val2", navBarHeight + infoBarHeight * 2.5);
     if (
       appDiv.getBoundingClientRect().top <=
         (infoBarHeight * 0.5 + navBarHeight) * -1 &&
@@ -61,13 +59,13 @@ function Landing() {
         {/* First info bar - the main text is on the LEFT side with animation */}
         <div className="info bar1">
           <div id="infoContainer" className={cNBar1Container}>
-            <div className="infoTitle borderedTitle specialText">
+            <header className="infoTitle borderedTitle specialText">
               HASZNÁLD FEL
               <div className="infoSubTitle">a természet erejét !</div>
-            </div>
+            </header>
 
             {/* <span className="specialText">Fenyegetések</span> */}
-            <div id="infoText">
+            <section id="infoText">
               Testünket folyamatosan bombázzák külső hatások. Ilyenek pédául a
               Nap UV sugárzása, vagy a baktériumok, vírusok, de ilyenek az
               emberi tevékenység olyan következményei is, mint a vegyianyagokkal
@@ -75,7 +73,7 @@ function Landing() {
               élelmiszeripari adalékanyagok. <br />Egészségünket és
               életartalmunkat ezek a negatív hatások erőteljesen képesek
               befolyásolni. <br />Segíts magadon és ne várd meg, amíg baj lesz!
-            </div>
+            </section>
           </div>
           {/* <div className="textContainer">
             Ezek a fenyegetések részben a környzetünk hatásai. Ilyen pédául a
@@ -96,11 +94,11 @@ function Landing() {
           </div> */}
 
           <div id="infoContainer" className={cNBar2Container}>
-            <div className="infoTitle borderedTitle specialText">
+            <header className="infoTitle borderedTitle specialText">
               VÉDD MEG
               <div className="infoSubTitle">a testedet !</div>
-            </div>
-            <div id="infoText">
+            </header>
+            <section id="infoText">
               Ez a sok negatív hatás túlterhelheti a testedet és kialakulhat az
               oxidatív stressz állapota valamint különféle krónikus gyulladások.
               A tested ugyan erőteljes védelmi vonallal rendelkezik ezeknek a
@@ -108,26 +106,26 @@ function Landing() {
               kell avatkoznod. <br />Egészséges táplálkozással és sok mozgással
               felkészítheted magad és jelentősen megnövelheted a tested
               ellenálló képességét.
-            </div>
+            </section>
           </div>
         </div>
 
         {/* Third info bar - the main text is on the LEFT side with animation */}
         <div className="info bar3">
           <div id="infoContainer" className={cNBar3Container}>
-            <div className="infoTitle borderedTitle specialText">
+            <header className="infoTitle borderedTitle specialText">
               FEDEZD FEL
               <div className="infoSubTitle">a csodafát !</div>
-            </div>
+            </header>
             {/* <span className="specialText">Moringa, a csodafa</span> */}
-            <div id="infoText">
+            <section id="infoText">
               A Moringa Oleifera, ez az Indiában őshonos fa akár segíthet neked
               is. Több tápanyagot tartalmaz, mint bármely más ismert növény a
               földön. Az ősi indiai orvoslás 300 féle betegség megelőzésére vagy
               kezelésére használta. A fa különböző részeit - levél, virág,
               kéreg, gyökér -, ma is mind felhasználják a hagyományos
               orvoslásban.
-            </div>
+            </section>
 
             <a className="buttonLink buttonFurther" href="/benefits">
               MIÉRT JÓ
@@ -144,6 +142,9 @@ function Landing() {
         <div className="info bar5">info5</div>
         <div className="info bar6">info6</div> */}
       </section>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }

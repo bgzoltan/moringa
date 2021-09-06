@@ -1,6 +1,5 @@
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import React, { useState } from "react";
 import Landing from "./components/Landing";
 import Benefits from "./components/Benefits";
 import Ingredients from "./components/Ingredients";

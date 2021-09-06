@@ -1,55 +1,58 @@
 // import "../App.css";
 import React, { useState } from "react";
+import Footer from "./Footer";
 
 function Benefits() {
-  console.log("Benefits started");
-  // States to control the moving DIV of bar1...bar4
-  const [cNBar7Container, setBar7Container] = useState("hideInfoContainer");
-  const [cNBar8Container, setBar8Container] = useState("hideInfoContainer");
-  const [cNBar10Container, setBar10Container] = useState("hideInfoContainer");
-  const [cNBenefits, setcNBenefits] = useState("benefitsHide");
+  // States to control the moving of DIVs: bar7...bar10
+  const [bar7Container, setBar7Container] = useState("hideInfoContainer");
+  const [bar8Container, setBar8Container] = useState("hideInfoContainer");
+  const [bar9Container, setBar9Container] = useState("hideInfoContainer");
+  const [bar10Container, setBar10Container] = useState("hideInfoContainer");
+  const [showText, setShowText] = useState("showshowText");
   const [isStart, setIsStart] = useState(true);
   const infoBarHeight = 800;
   const navBarHeight = 105;
-  // This function handles which bar's DIV start to move depending on the scroll position
 
+  // This function handles which bar's DIV start to move depending on the scroll position
   function moveIt() {
     const appDiv = document.querySelector(".App");
+    let top = appDiv.getBoundingClientRect().top;
 
-    // Setting up the classes of bars depending on the scroll position
-    console.log(Math.abs(appDiv.getBoundingClientRect().top));
+    setBar7Container(
+      top <= 0 && top >= (infoBarHeight * 0.5 + navBarHeight) * -1
+        ? "showInfoContainer"
+        : "hideInfoContainer"
+    );
 
-    if (Math.abs(appDiv.getBoundingClientRect().top) <= 0) {
-      setBar7Container("showInfoContainer");
-      setBar8Container("hideInfoContainer");
-      setBar10Container("hideInfoContainer");
-      setcNBenefits("benefitsHide");
-    }
-    if (
-      Math.abs(appDiv.getBoundingClientRect().top) > infoBarHeight &&
-      Math.abs(appDiv.getBoundingClientRect().top) <= infoBarHeight * 2
-    ) {
-      setBar7Container("hideInfoContainer");
-      setBar8Container("showInfoContainer");
-      setBar10Container("hideInfoContainer");
-      setcNBenefits("benefitsHide");
-    }
-    if (
-      Math.abs(appDiv.getBoundingClientRect().top) > infoBarHeight * 2 &&
-      Math.abs(appDiv.getBoundingClientRect().top) <= infoBarHeight * 3
-    ) {
-      setBar10Container("showInfoContainer");
-      setBar8Container("hideInfoContainer");
-      setcNBenefits("benefitsShow");
-    }
-    if (Math.abs(appDiv.getBoundingClientRect().top) > infoBarHeight * 3) {
-      setBar7Container("showInfoContainer");
-      setBar7Container("hideInfoContainer");
-      setcNBenefits("benefitsHide");
-    }
+    setBar8Container(
+      top <= (infoBarHeight * 0.5 + navBarHeight) * -1 &&
+      top >= (infoBarHeight * 1.5 + navBarHeight) * -1
+        ? "showInfoContainer"
+        : "hideInfoContainer"
+    );
+
+    setBar9Container(
+      top <= (infoBarHeight * 1.5 + navBarHeight) * -1 &&
+      top >= (infoBarHeight * 2.5 + navBarHeight) * -1
+        ? "showInfoContainer"
+        : "hideInfoContainer"
+    );
+
+    setShowText(
+      top <= (infoBarHeight * 1.5 + navBarHeight) * -1 &&
+      top >= (infoBarHeight * 2.5 + navBarHeight) * -1
+        ? "showAnimatedText"
+        : "hideAnimatedText"
+    );
+
+    setBar10Container(
+      top <= (infoBarHeight * 2.5 + navBarHeight) * -1
+        ? "showInfoContainer"
+        : "hideInfoContainer"
+    );
   }
 
-  // To create a delay of displaying infoBa1 during the start
+  // To create a delay of displaying bar1 during the start
   if (isStart) {
     setBar7Container("hideInfoContainer");
     setIsStart(false);
@@ -62,126 +65,103 @@ function Benefits() {
   return (
     <div>
       <section>
-        {/* First info bar - the main text is on the LEFT side with animation */}
         <div className="info bar7">
-          <div id="infoContainer" className={cNBar7Container}>
-            <div className="infoTitle borderedTitle specialText">
+          <div id="infoContainer" className={bar7Container}>
+            <header className="infoTitle borderedTitle specialText">
               AZ JÓ ÉTREND
               <div className="infoSubTitle">a legjobb orvosság !</div>
-            </div>
-            <div id="infoText">
-              Az egészséges, erős testhez szükséged van rengeteg tápanyagra,
-              azaz fehérjékre, zsírokra, szénhidrátokra, ásványi anyagokra,
-              vitaminokra és nyomelemekre. A modern életformánk ezt többnyire
-              nem biztosítja, mert nem táplálkozunk elég változatosan és jó
-              minőségben. A Moringa Oleifera - rendkívüli módon -, 90 féle
-              tápanyagot tartalmaz. Köztük 46 féle antioxidánst, 20 féle
-              aminosavat, ABCE vitaminokat, különféle ásványi anyagokat,
-              nyomelemeket és sok rostot.
-            </div>
+            </header>
+            <section id="infoText">
+              Az egészséges, erős testhez rengeteg jó minőségű tápanyagra van
+              szükség: fehérjékre, zsírokra, szénhidrátokra, ásványi anyagokra,
+              vitaminokra és nyomelemekre. Rohanó világunkban azonban nem
+              táplálkozunk elég változatosan és jó minőségben. A Moringa
+              Oleifera - rendkívüli módon -, 90 féle tápanyagot tartalmaz.
+              Köztük 46 féle antioxidánst, 20 féle aminosavat, ABCE vitaminokat,
+              különféle ásványi anyagokat, nyomelemeket és sok rostot.
+            </section>
           </div>
-          {/* <div className="textContainer">
-            Az egészséges test egyik alappillére, hogy a táplálkozás útján
-            hozzájusson minden, számára szükséges tápanyaghoz, azaz fehérjékhez,
-            zsírokhoz, szénhidrátokhoz, ásványi- és nyom-elemekhez valamint
-            vitaminokhoz.
-          </div> */}
         </div>
 
-        <div className="feature featureBar1">
+        {/* <div className="feature featureBar1">
           <div className="featureTitle">KULCSFONTOSSÁGÚ JELLEMZŐK</div>
           <div className="featureColumns">
             <div className="feature1 column1">
-              <div>Antioxidánsok</div>
+              <div>
+                AZ ANTIOXIDÁNSOK A SZABAD GYÖKÖK MEGKÖTÉSÉBEN JÁTSZANAK
+                KULCSFONTOSSÁGÚ SZEREPET
+              </div>
             </div>
             <div className="feature1 column2">Aminosavak</div>
             <div className="feature1 column3">Ásványi anyagok</div>
-            <div className="feature1 column4">Vitaminok</div>
+            <div className="feature1 column4">
+              Vitaminok Vitaminok Vitaminok Vitaminok
+            </div>
             <div className="feature1 column5">Egyéb növényi tápanyagok</div>
           </div>
-        </div>
+        </div> */}
 
-        {/* Second info bar - the main text is on the RIGHT side with animation */}
         <div className="info bar8">
-          {/* <div className="textContainer">
-            A kávéban és teában található koffein sok embernél okoz heves
-            szívdobogást, izzadást, feszültség-érzetet, vérnyomás ingadozást,
-            majd a hatás elmúltával kimerültség érzetet. Vannak azonban
-            alternatívák ezek elkerülésére. Ilyen a csodálatos Moringa is.
-          </div> */}
-
-          <div id="infoContainer" className={cNBar8Container}>
-            <div className="infoTitle borderedTitle specialText">
+          <div id="infoContainer" className={bar8Container}>
+            <header className="infoTitle borderedTitle specialText">
               A MORINGA
               <div className="infoSubTitle">levele különleges !</div>
-            </div>
-            <div id="infoText">
+            </header>
+            <section id="infoText">
               A Moringa Oleifera fa összes része közül a levele tartalmazza a
               legtöbb tápanyagot, ezért ezt használják a leggyakrabban fel a
               táplálkozásban. Vizsgálatok szerint ráadásul a szárított levél
               több tápanyagot tartalmaz a nyers levélnél. A szárított levelet
-              nem csak Indiában fogyasztják már, mert híre egyre gyorsabban
-              terjed a világban. Viszonylag igénytelen növény, ezért Moringa
-              ültetvények vannak már Ázsiában, Afrikában és Közép-Amerikában is.
-            </div>
+              nem csak Indiában fogyasztják. Viszonylag igénytelen növény, ezért
+              Moringa ültetvények vannak már Ázsiában, Afrikában és
+              Közép-Amerikában is.
+            </section>
           </div>
         </div>
 
         <div className="info bar9">
-          <div className={cNBenefits}>
-            <div className="animatedText delay1 benefitsTitle">
-              <span className="specialText">A Moringa Oleifera </span>
-              LEVELE SEGÍTHET...
-            </div>
-            <ul>
-              <li className="animatedText delay1">
-                A testedet károsító szabad gyökök elleni küzdelemben
-              </li>
-              <li className="animatedText delay2">
-                Az éberséged és az energiaszinted fenntartásában
-              </li>
-              <li className="animatedText delay3">
-                A testedben lévő gyulladások csökkentésében
-              </li>
-              <li className="animatedText delay4">
-                Az immunrendszered erősítésében
-              </li>
-              <li className="animatedText delay5">
-                A benned zajló öregedési folyamatok lassításában
-              </li>
-              <li className="animatedText delay6">
-                A vérnyomásod szabályozásában
-              </li>
-              <li className="animatedText delay7">
-                A vércukorszinted szabályozásában
-              </li>
-              <li className="animatedText delay8">A normális emésztésben</li>
-              <li className="animatedText delay9">
-                A fizikai erőnléted fenntartásában
-              </li>
-              <li className="animatedText delay10">A pihentető alvásban</li>
-              <li className="animatedText delay11">A méregtelenítésben</li>
-            </ul>
-          </div>
-        </div>
-
-        {/* Third info bar - the main text is on the LEFT side with animation */}
-        <div className="info bar10">
-          <div id="infoContainer" className={cNBar10Container}>
-            <div className="infoTitle borderedTitle specialText">
-              KOFFEIN MENTES
-              <div className="infoSubTitle">energia !</div>
-            </div>
-            <div id="infoText">
-              A legjobban elterjedt élénkítő szerünk a kávé és a tea. Azonban a
-              koffeinnek és teinnek számos rossz hatása van, amelyeket viszont a
-              Moringa nem produkál, mégis (fokozatosan) feltölt energiával . A
-              kávéban és teában található koffein gyorsan emeli meg az
-              energiaszintet, de sok embernél okoz heves szívdobogást, izzadást,
-              feszültség-érzetet, vérnyomás ingadozást, majd a hatás elmúltával
-              kimerültség érzetet. Ráadásul hormonális rendszerünkre is hatással
-              van.
-            </div>
+          <div id="infoContainer" className={bar9Container}>
+            <header className="infoTitle borderedTitle specialText">
+              A MORINGA
+              <div className="infoSubTitle">SEGÍTHET</div>
+            </header>
+            <section id="infoText">
+              <ol>
+                <li className={showText} id="delay1">
+                  A káros szabad gyökök elleni küzdelemben
+                </li>
+                <li className={showText} id="delay2">
+                  Az általános energiaszint fenntartásában
+                </li>
+                <li className={showText} id="delay3">
+                  A gyulladások csökkentésében
+                </li>
+                <li className={showText} id="delay4">
+                  Az immunrendszer erősítésében
+                </li>
+                <li className={showText} id="delay5">
+                  Az öregedés lassításában
+                </li>
+                <li className={showText} id="delay6">
+                  A vérnyomás csökkentésében
+                </li>
+                <li className={showText} id="delay7">
+                  A vércukorszint csökkentésében
+                </li>
+                <li className={showText} id="delay8">
+                  Az emésztésben
+                </li>
+                <li className={showText} id="delay9">
+                  A erőnlét fenntartásában
+                </li>
+                <li className={showText} id="delay10">
+                  A pihentető alvásban
+                </li>
+                <li className={showText} id="delay11">
+                  A méregtelenítésben
+                </li>
+              </ol>
+            </section>
           </div>
           {/* <div className="textContainer">
             A kávéban és teában található koffein sok embernél okoz heves
@@ -191,8 +171,27 @@ function Benefits() {
           </div> */}
         </div>
 
-        <div className="info bar11">info5</div>
-        <div className="info bar12">info6</div>
+        <div className="info bar10">
+          <div id="infoContainer" className={bar10Container}>
+            <header className="infoTitle borderedTitle specialText">
+              KOFFEIN MENTES
+              <div className="infoSubTitle">energia !</div>
+            </header>
+            <section id="infoText">
+              A legjobban elterjedt élénkítő szerünk a kávé és a tea. Azonban a
+              koffeinnek és teinnek számos rossz hatása van, amelyeket viszont a
+              Moringa nem produkál, mégis segít az energiaszint növelésében. A
+              kávéban és teában található koffein gyorsan emeli meg az
+              energiaszintet, a Moringa lassan, fokozatosan. A kávéval szemben
+              nem okoz heves szívdobogást, izzadást, feszültség-érzetet,
+              vérnyomás ingadozást, majd a hatás elmúltával kimerültség érzetet.
+            </section>
+          </div>
+        </div>
+
+        <footer>
+          <Footer />
+        </footer>
       </section>
     </div>
   );

@@ -159,109 +159,80 @@ body {
                background-position: center;
                background-size: cover;
 
-               .benefitsHide {
-                    // BENEFITS hide with animation
-                    //  Hide is the default value of BENEFITS then it changes to SHOW depending on the scroll
-                    height: auto;
-                    padding: 30px;
-                    width: 30%;
-                    margin: 50px;
-                    background-color: rgba(0, 114, 152, 0.8);
+               .hideAnimatedText {
+                    visibility:visible;
+                    animation-duration: 3s;
+                    animation-name: fadeOut;
+                    animation-fill-mode: forwards;
 
-                    .animatedText {
-                         visibility: visible;
-                         animation-duration: 3s;
-                         animation-name: fadeOut;
-                         animation-fill-mode: forwards;
-
-                         @keyframes fadeOut {
-                              0% {
-                                   opacity: 1;
-                              }
-                              100% {
-                                   opacity: 0;
-                              }
+                    @keyframes fadeOut {
+                         0% {
+                              opacity: 0;
+                         }
+                         100% {
+                              opacity: 10;
                          }
                     }
                }
 
-               .benefitsShow {
-                    // BENEFITS appears with fade animation
-                    // "delay" means the passed time between delayed "li" text rows
-                    height: auto;
-                    padding: 30px;
-                    width: 30%;
-                    margin: 50px;
-                    background-color: rgba(7, 37, 48, 0.6);
+               ol {
+                    margin-top: -40px;
+                       }
 
-                    .animatedText {
-                         opacity: 0;
-                         animation-duration: 2s;
-                         animation-name: fadeInLeft;
-                         animation-fill-mode: forwards;
+               .showAnimatedText {
+                    opacity: 0;
+                    animation-duration: 2s;
+                    animation-name: fadeInLeft;
+                    animation-fill-mode: forwards;
+                  
 
-                         @keyframes fadeInLeft {
-                              0% {
-                                   // Text slides from left "-35px" position to right ("0" position)
-                                   transform: translate3d(-35px, 0, 0);
-                              }
-                              100% {
-                                   opacity: 1;
-                                   transform: translate3d(0, 0, 0);
-                              }
+                    @keyframes fadeInLeft {
+                         0% {
+                              // Text slides from left "-35px" position to right ("0" position)
+                              transform: translate3d(-35px, 0, 0);
+                         }
+                         100% {
+                              opacity: 1;
+                              transform: translate3d(0, 0, 0);
                          }
                     }
-
-                    ul {
-                         li {
-                              list-style: none;
-                         }
-                    }
-
-                    .benefitsTitle {
-                         font-family: $normalFontFamily;
-                         font-size: calc(#{$textFontSize} * 2.3);
-                         font-weight: 700;
-                         height: auto;
-                         padding: 30px;
-                    }
+               }
 
                     //  DELAYS between "li" text rows
-                    .delay1 {
+                    #delay1 {
                          animation-delay: $textDelayStart;
                     }
-                    .delay2 {
+                    #delay2 {
                          animation-delay: calc(#{$textDelayStart} + #{$textDelay} * 1);
                     }
-                    .delay3 {
+                    #delay3 {
                          animation-delay: calc(#{$textDelayStart} + #{$textDelay} * 2);
                     }
-                    .delay4 {
+                    #delay4 {
                          animation-delay: calc(#{$textDelayStart} + #{$textDelay} * 3);
                     }
-                    .delay5 {
+                    #delay5 {
                          animation-delay: calc(#{$textDelayStart} + #{$textDelay} * 4);
                     }
-                    .delay6 {
+                    #delay6 {
                          animation-delay: calc(#{$textDelayStart} + #{$textDelay} * 5);
                     }
-                    .delay7 {
+                    #delay7 {
                          animation-delay: calc(#{$textDelayStart} + #{$textDelay} * 6);
                     }
-                    .delay8 {
+                    #delay8 {
                          animation-delay: calc(#{$textDelayStart} + #{$textDelay} * 7);
                     }
-                    .delay9 {
+                    #delay9 {
                          animation-delay: calc(#{$textDelayStart} + #{$textDelay} * 8);
                     }
-                    .delay10 {
+                    #delay10 {
                          animation-delay: calc(#{$textDelayStart} + #{$textDelay} * 9);
                     }
-                    .delay11 {
+                    #delay11 {
                          animation-delay: calc(#{$textDelayStart} + #{$textDelay} * 10);
                     }
                }
-          }
 
           .bar10 {
                display: flex;
@@ -360,6 +331,8 @@ body {
                          max-width: 80%;
                          line-height: 2.1rem;
                          // text-align: justify;
+
+                         
                     }
                }
 
@@ -374,7 +347,7 @@ body {
 
                .textContainer {
                     background-color: rgba(0, 0, 0, 0.4);
-                    width: calc(100% - #{$infoContainerWidth});
+                    width: calc(100% - #{$infoContainerWidth} - 300px);
                     max-height: 5em;
                     padding: 30px;
                     margin: 90px 30px 90px 30px;
@@ -384,7 +357,7 @@ body {
      .buttonLink {
           display: block;
           text-align: center;
-           font-size: $textFontSize;
+          font-size: $textFontSize;
           color: $textColor;
           font-family: $normalFontFamily;
           background-color: #5d311a;
@@ -392,28 +365,34 @@ body {
           height: 60px;
           line-height: 60px;
           border-radius: 9px;
-          cursor:pointer;
+          cursor: pointer;
           text-decoration: none;
-          transition: color  background-color border;
+          transition: color background-color border;
           transition-duration: 1s;
-          
      }
-     .buttonFurther{
+     .buttonFurther {
           margin-left: 30px;
      }
 
-  
      .buttonLink:hover {
-         box-sizing: border-box;
-          color:black;
-          border: 3px solid  #5d311a;;
+          box-sizing: border-box;
+          color: black;
+          border: 3px solid #5d311a;
           background-color: #cae287;
      }
-    
-}
 
-.buttonShop{
-     margin-left: 20px;
-     color: chartreuse;
-     margin-top:50px;
+     footer {
+          box-sizing: border-box;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 100vw;
+
+          color: white;
+          border: 10px solid #cae287;
+          background-color: #5d311a;
+          height: 105px;
+          z-index: 2;
+     }
 }

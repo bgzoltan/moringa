@@ -334,69 +334,51 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover; }
-    body section .bar9 .benefitsHide {
-      height: auto;
-      padding: 30px;
-      width: 30%;
-      margin: 50px;
-      background-color: rgba(0, 114, 152, 0.8); }
-      body section .bar9 .benefitsHide .animatedText {
-        visibility: visible;
-        animation-duration: 3s;
-        animation-name: fadeOut;
-        animation-fill-mode: forwards; }
+    body section .bar9 .hideAnimatedText {
+      visibility: visible;
+      animation-duration: 3s;
+      animation-name: fadeOut;
+      animation-fill-mode: forwards; }
 @keyframes fadeOut {
   0% {
-    opacity: 1; }
+    opacity: 0; }
   100% {
-    opacity: 0; } }
-    body section .bar9 .benefitsShow {
-      height: auto;
-      padding: 30px;
-      width: 30%;
-      margin: 50px;
-      background-color: rgba(7, 37, 48, 0.6); }
-      body section .bar9 .benefitsShow .animatedText {
-        opacity: 0;
-        animation-duration: 2s;
-        animation-name: fadeInLeft;
-        animation-fill-mode: forwards; }
+    opacity: 10; } }
+    body section .bar9 ol {
+      margin-top: -40px; }
+    body section .bar9 .showAnimatedText {
+      opacity: 0;
+      animation-duration: 2s;
+      animation-name: fadeInLeft;
+      animation-fill-mode: forwards; }
 @keyframes fadeInLeft {
   0% {
     transform: translate3d(-35px, 0, 0); }
   100% {
     opacity: 1;
     transform: translate3d(0, 0, 0); } }
-      body section .bar9 .benefitsShow ul li {
-        list-style: none; }
-      body section .bar9 .benefitsShow .benefitsTitle {
-        font-family: "Cuprum", sans-serif;
-        font-size: calc(23px * 2.3);
-        font-weight: 700;
-        height: auto;
-        padding: 30px; }
-      body section .bar9 .benefitsShow .delay1 {
-        animation-delay: 0.3s; }
-      body section .bar9 .benefitsShow .delay2 {
-        animation-delay: calc(0.3s + 0.3s * 1); }
-      body section .bar9 .benefitsShow .delay3 {
-        animation-delay: calc(0.3s + 0.3s * 2); }
-      body section .bar9 .benefitsShow .delay4 {
-        animation-delay: calc(0.3s + 0.3s * 3); }
-      body section .bar9 .benefitsShow .delay5 {
-        animation-delay: calc(0.3s + 0.3s * 4); }
-      body section .bar9 .benefitsShow .delay6 {
-        animation-delay: calc(0.3s + 0.3s * 5); }
-      body section .bar9 .benefitsShow .delay7 {
-        animation-delay: calc(0.3s + 0.3s * 6); }
-      body section .bar9 .benefitsShow .delay8 {
-        animation-delay: calc(0.3s + 0.3s * 7); }
-      body section .bar9 .benefitsShow .delay9 {
-        animation-delay: calc(0.3s + 0.3s * 8); }
-      body section .bar9 .benefitsShow .delay10 {
-        animation-delay: calc(0.3s + 0.3s * 9); }
-      body section .bar9 .benefitsShow .delay11 {
-        animation-delay: calc(0.3s + 0.3s * 10); }
+    body section .bar9 #delay1 {
+      animation-delay: 0.3s; }
+    body section .bar9 #delay2 {
+      animation-delay: calc(0.3s + 0.3s * 1); }
+    body section .bar9 #delay3 {
+      animation-delay: calc(0.3s + 0.3s * 2); }
+    body section .bar9 #delay4 {
+      animation-delay: calc(0.3s + 0.3s * 3); }
+    body section .bar9 #delay5 {
+      animation-delay: calc(0.3s + 0.3s * 4); }
+    body section .bar9 #delay6 {
+      animation-delay: calc(0.3s + 0.3s * 5); }
+    body section .bar9 #delay7 {
+      animation-delay: calc(0.3s + 0.3s * 6); }
+    body section .bar9 #delay8 {
+      animation-delay: calc(0.3s + 0.3s * 7); }
+    body section .bar9 #delay9 {
+      animation-delay: calc(0.3s + 0.3s * 8); }
+    body section .bar9 #delay10 {
+      animation-delay: calc(0.3s + 0.3s * 9); }
+    body section .bar9 #delay11 {
+      animation-delay: calc(0.3s + 0.3s * 10); }
   body section .bar10 {
     display: flex;
     justify-content: flex-end;
@@ -471,7 +453,7 @@ body {
       height: 0px; }
     body section .info .textContainer {
       background-color: rgba(0, 0, 0, 0.4);
-      width: calc(100% - 600px);
+      width: calc(100% - 600px - 300px);
       max-height: 5em;
       padding: 30px;
       margin: 90px 30px 90px 30px; }
@@ -488,19 +470,26 @@ body {
     border-radius: 9px;
     cursor: pointer;
     text-decoration: none;
-    transition: color  background-color border;
+    transition: color background-color border;
     transition-duration: 1s; }
   body .buttonFurther {
     margin-left: 30px; }
   body .buttonLink:hover {
     box-sizing: border-box;
     color: black;
-    border: 3px solid  #5d311a;
+    border: 3px solid #5d311a;
     background-color: #cae287; }
-
-.buttonShop {
-  margin-left: 20px;
-  color: chartreuse;
-  margin-top: 50px; }
+  body footer {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    color: white;
+    border: 10px solid #cae287;
+    background-color: #5d311a;
+    height: 105px;
+    z-index: 2; }
 
 /*# sourceMappingURL=App.css.map */
