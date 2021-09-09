@@ -1,17 +1,8 @@
 @import "./variables";
-// @import url("https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");/
-// @import url("https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Francois+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Parisienne&family=Signika+Negative:wght@300;400;600;700&display=swap");
-// @import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
-@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
-
-@import url("https://fonts.googleapis.com/css2?family=Cuprum:wght@400;600;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap');
-
-
 @import "./ingredients";
 @import "./shop";
+@import url("https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap");
+
 body {
      box-sizing: border-box;
      padding: 0px;
@@ -43,7 +34,6 @@ body {
                justify-content: center;
                align-items: flex-end;
                width: 100%;
-
                color: $navBarColor;
                background-color: #cae287;
                height: 105px;
@@ -70,34 +60,31 @@ body {
                     border-right: 2px solid #cae287;
                     margin-bottom: 10px;
                }
-
                .centerLink {
                     position: absolute;
                     top: -80px;
-                    left: calc(50% - 150 px);
+                    left: calc(50% - 150px);
                     width: 220px;
                     height: 220px;
-
                     color: white;
                     background-color: #cae287;
-                    // background-color: white;
                     background-image: url("./img/moringalogo.png");
                     background-position: bottom;
                     background-repeat: no-repeat;
                     background-size: 35%;
                     background-position-y: 85px;
-
                     border-radius: 50%;
                     text-decoration: none;
                }
                .rightLink {
                     clip-path: polygon(100% 0%, 90% 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
-                    background-image: linear-gradient(to right, #5d311a 65%, #cae287);
+                    background-color: #5d311a ;
+                    // background-image: linear-gradient(to right, #5d311a 65%, #cae287);
                }
-
                .leftLink {
                     clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 10% 50%, 0% 0%);
-                    background-image: linear-gradient(to left, #5d311a 65%, #cae287);
+                    background-color: #5d311a ;
+                    // background-image: linear-gradient(to left, #5d311a 65%, #cae287);
                }
           }
           #logo img {
@@ -113,7 +100,6 @@ body {
                background-repeat: no-repeat;
                background-position: center;
                background-size: cover;
-               // padding:10px;
           }
           .bar2 {
                display: flex;
@@ -124,17 +110,14 @@ body {
                background-position: center;
                background-size: cover;
           }
-
           .bar3 {
                display: flex;
                justify-content: flex-start;
-               // align-items: flex-end;
                background-image: url("./img/moringa2.jpg");
                background-repeat: no-repeat;
                background-position: center;
                background-size: cover;
           }
-
           .bar7 {
                display: flex;
                justify-content: flex-start;
@@ -143,7 +126,6 @@ body {
                background-position: center;
                background-size: cover;
           }
-
           .bar8 {
                display: flex;
                justify-content: flex-end;
@@ -152,7 +134,6 @@ body {
                background-position: center;
                background-size: cover;
           }
-
           .bar9 {
                display: flex;
                justify-content: flex-start;
@@ -160,13 +141,11 @@ body {
                background-repeat: no-repeat;
                background-position: center;
                background-size: cover;
-
                .hideAnimatedText {
-                    visibility:visible;
+                    visibility: visible;
                     animation-duration: 3s;
                     animation-name: fadeOut;
                     animation-fill-mode: forwards;
-
                     @keyframes fadeOut {
                          0% {
                               opacity: 0;
@@ -176,18 +155,14 @@ body {
                          }
                     }
                }
-
                ol {
                     margin-top: -40px;
-                       }
-
+               }
                .showAnimatedText {
                     opacity: 0;
                     animation-duration: 2s;
                     animation-name: fadeInLeft;
                     animation-fill-mode: forwards;
-                  
-
                     @keyframes fadeInLeft {
                          0% {
                               // Text slides from left "-35px" position to right ("0" position)
@@ -200,41 +175,41 @@ body {
                     }
                }
 
-                    //  DELAYS between "li" text rows
-                    #delay1 {
-                         animation-delay: $textDelayStart;
-                    }
-                    #delay2 {
-                         animation-delay: calc(#{$textDelayStart} + #{$textDelay} * 1);
-                    }
-                    #delay3 {
-                         animation-delay: calc(#{$textDelayStart} + #{$textDelay} * 2);
-                    }
-                    #delay4 {
-                         animation-delay: calc(#{$textDelayStart} + #{$textDelay} * 3);
-                    }
-                    #delay5 {
-                         animation-delay: calc(#{$textDelayStart} + #{$textDelay} * 4);
-                    }
-                    #delay6 {
-                         animation-delay: calc(#{$textDelayStart} + #{$textDelay} * 5);
-                    }
-                    #delay7 {
-                         animation-delay: calc(#{$textDelayStart} + #{$textDelay} * 6);
-                    }
-                    #delay8 {
-                         animation-delay: calc(#{$textDelayStart} + #{$textDelay} * 7);
-                    }
-                    #delay9 {
-                         animation-delay: calc(#{$textDelayStart} + #{$textDelay} * 8);
-                    }
-                    #delay10 {
-                         animation-delay: calc(#{$textDelayStart} + #{$textDelay} * 9);
-                    }
-                    #delay11 {
-                         animation-delay: calc(#{$textDelayStart} + #{$textDelay} * 10);
-                    }
+               //  DELAYS between "li" text rows
+               #delay1 {
+                    animation-delay: $textDelayStart;
                }
+               #delay2 {
+                    animation-delay: calc(#{$textDelayStart} + #{$textDelay} * 1);
+               }
+               #delay3 {
+                    animation-delay: calc(#{$textDelayStart} + #{$textDelay} * 2);
+               }
+               #delay4 {
+                    animation-delay: calc(#{$textDelayStart} + #{$textDelay} * 3);
+               }
+               #delay5 {
+                    animation-delay: calc(#{$textDelayStart} + #{$textDelay} * 4);
+               }
+               #delay6 {
+                    animation-delay: calc(#{$textDelayStart} + #{$textDelay} * 5);
+               }
+               #delay7 {
+                    animation-delay: calc(#{$textDelayStart} + #{$textDelay} * 6);
+               }
+               #delay8 {
+                    animation-delay: calc(#{$textDelayStart} + #{$textDelay} * 7);
+               }
+               #delay9 {
+                    animation-delay: calc(#{$textDelayStart} + #{$textDelay} * 8);
+               }
+               #delay10 {
+                    animation-delay: calc(#{$textDelayStart} + #{$textDelay} * 9);
+               }
+               #delay11 {
+                    animation-delay: calc(#{$textDelayStart} + #{$textDelay} * 10);
+               }
+          }
 
           .bar10 {
                display: flex;
@@ -262,7 +237,6 @@ body {
                // padding:10px;
                .featureTitle {
                     text-align: center;
-                
                     font-size: calc(#{$textFontSize} * 2);
                     font-weight: 700;
                }
@@ -293,9 +267,7 @@ body {
                height: $infoBarHeight;
                width: 100vw;
                border: 1px solid;
-
                #infoContainer {
-                    // background-color: rgba(0, 0, 0, 0.4);
                     background-color: rgba(7, 37, 48, 0.6);
                     width: $infoContainerWidth;
                     margin: 90px 60px 90px 60px;
@@ -303,7 +275,6 @@ body {
                     transition-timing-function: ease-out-in;
                     // This "overflow" hides the text outside the Container
                     overflow: hidden;
-
                     .infoTitle {
                          font-family: $normalFontFamily;
                          font-size: calc(#{$textFontSize} * 2.8);
@@ -311,7 +282,6 @@ body {
                          height: auto;
                          padding: 12px;
                          text-align: center;
-
                          .infoSubTitle {
                               font-size: calc(#{$textFontSize} * 2);
                               font-weight: 400;
@@ -319,34 +289,25 @@ body {
                               text-align: center;
                          }
                     }
-
                     .borderedTitle {
-                         // border-top:1px solid white;
                          border-bottom: 1px solid white;
                          margin: 30px;
                     }
-
                     #infoText {
                          font-size: $textFontSize;
                          font-weight: 300;
                          padding: 30px;
                          max-width: 80%;
                          line-height: 2.1rem;
-                         // text-align: justify;
-
-                         
                     }
                }
-
                .showInfoContainer {
                     background-color: rgba(0, 0, 0, 0.4);
                     height: calc(#{$infoBarHeight} - 180px);
                }
-
                .hideInfoContainer {
                     height: 0px;
                }
-
                .textContainer {
                     background-color: rgba(0, 0, 0, 0.4);
                     width: calc(100% - #{$infoContainerWidth} - 300px);
@@ -356,7 +317,7 @@ body {
                }
           }
      }
-     .buttons{
+     .buttons {
           display: flex;
           flex-direction: column;
           position: relative;
@@ -367,39 +328,37 @@ body {
           border: none;
           margin-left: 30px;
           padding: 0px;
-     .buttonLink {
-          display: block;
-          position: absolute;
-          font-size: $textFontSize;
-          color: $textColor;
-          font-family: $normalFontFamily;
-          background-image:  linear-gradient(to right, #5d311a 45%,  #8a6755);
-          width: 200px;
-          height: 60px;
-          line-height: 60px;
-          clip-path: polygon(0% 0%, 100% 0, 90% 51%, 80% 100%, 0% 100%);
-          border-radius: 9px;
-          border-bottom: 5px solid #1f1008;
-          cursor: pointer;
-          text-decoration: none;
-          top:0px;
-
-     }
-     .buttonLink:hover {
-          top:-3px;
-          border-bottom: 8px solid  #1f1008;
-          background-image:  linear-gradient(to right, #5d311a 25%,  #8a6755);
-     }
-
-     
-     .buttonLink:active {
-          margin-top:7px;
-          box-sizing: border-box;
-          border-top: none;
-          border-bottom: 0px;
-          background-image:  linear-gradient(to rigth, #5d311a 25%,  #8a6755);
-
-     }
+          .buttonLink {
+               display: block;
+               position: absolute;
+               font-size: $textFontSize;
+               color: $textColor;
+               font-family: $normalFontFamily;
+               // background-image: linear-gradient(to right, #5d311a 45%, #8a6755);
+               background-color: #5d311a ;
+               width: 200px;
+               height: 60px;
+               line-height: 60px;
+               clip-path: polygon(0% 0%, 100% 0, 90% 51%, 80% 100%, 0% 100%);
+               border-radius: 9px;
+               border-bottom: 5px solid #1f1008;
+               cursor: pointer;
+               text-decoration: none;
+               top: 0px;
+          }
+          .buttonLink:hover {
+               top: -3px;
+               border-bottom: 8px solid #1f1008;
+               // background-image: linear-gradient(to right, #5d311a 25%, #8a6755);
+          }
+          .buttonLink:active {
+               margin-top: 7px;
+               box-sizing: border-box;
+               border-top: none;
+               border-bottom: 0px;
+               // background-image: linear-gradient(to rigth, #5d311a 25%, #8a6755);
+               background-color: #5d311a ;
+          }
      }
      footer {
           box-sizing: border-box;
@@ -409,23 +368,22 @@ body {
           align-items: center;
           width: 100vw;
           padding: 20px;
-       
           color: white;
-          border:none;
+          border: none;
           border-bottom: 10px solid #cae287;
           background-color: #5d311a;
           height: auto;
           z-index: 2;
-          .contact{
+          .contact {
                font-weight: 400;
                line-height: 35px;
           }
-          .developer{
+          .developer {
                font-size: 22px;
                font-weight: 300;
                line-height: 25px;
-               .icon{
-                    color:white
+               .icon {
+                    color: white;
                }
           }
      }

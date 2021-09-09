@@ -1,7 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Parisienne&family=Signika+Negative:wght@300;400;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cuprum:wght@400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap");
 #ingredientsContainer {
   display: flex;
@@ -243,7 +239,7 @@
           font-size: 35px;
           font-weight: 600; }
         .prBar #prRightSide .prInfoContainer .prDetails .productFeatures {
-          font-family: 'Cuprum', sans-serif;
+          font-family: "Yanone Kaffeesatz", sans-serif;
           font-size: 18px;
           padding: 3px;
           margin: 2px;
@@ -320,7 +316,7 @@ body {
       body #navigation #navBar .centerLink {
         position: absolute;
         top: -80px;
-        left: calc(50% - 150 px);
+        left: calc(50% - 150px);
         width: 220px;
         height: 220px;
         color: white;
@@ -334,10 +330,10 @@ body {
         text-decoration: none; }
       body #navigation #navBar .rightLink {
         clip-path: polygon(100% 0%, 90% 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
-        background-image: linear-gradient(to right, #5d311a 65%, #cae287); }
+        background-color: #5d311a; }
       body #navigation #navBar .leftLink {
         clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 10% 50%, 0% 0%);
-        background-image: linear-gradient(to left, #5d311a 65%, #cae287); }
+        background-color: #5d311a; }
     body #navigation #logo img {
       height: 100px; }
   body section .bar1 {
@@ -523,7 +519,7 @@ body {
       font-size: 29px;
       color: whitesmoke;
       font-family: "Yanone Kaffeesatz", sans-serif;
-      background-image: linear-gradient(to right, #5d311a 45%, #8a6755);
+      background-color: #5d311a;
       width: 200px;
       height: 60px;
       line-height: 60px;
@@ -535,14 +531,13 @@ body {
       top: 0px; }
     body .buttons .buttonLink:hover {
       top: -3px;
-      border-bottom: 8px solid  #1f1008;
-      background-image: linear-gradient(to right, #5d311a 25%, #8a6755); }
+      border-bottom: 8px solid #1f1008; }
     body .buttons .buttonLink:active {
       margin-top: 7px;
       box-sizing: border-box;
       border-top: none;
       border-bottom: 0px;
-      background-image: linear-gradient(to rigth, #5d311a 25%, #8a6755); }
+      background-color: #5d311a; }
   body footer {
     box-sizing: border-box;
     display: flex;

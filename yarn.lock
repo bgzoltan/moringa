@@ -3169,9 +3169,9 @@
     "lodash.uniq" "^4.5.0"
 
 "caniuse-lite@^1.0.0", "caniuse-lite@^1.0.30000981", "caniuse-lite@^1.0.30001109", "caniuse-lite@^1.0.30001125", "caniuse-lite@^1.0.30001181":
-  "integrity" "sha512-xJJqzyd+7GCJXkcoBiQ1GuxEiOBCLQ0aVW9HMekifZsAVGdj5eJ4mFB9fEhSHipq9IOk/QXFJUiIr9lZT+EsGw=="
-  "resolved" "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001191.tgz"
-  "version" "1.0.30001191"
+  "integrity" "sha512-F+A3N9jTZL882f/fg/WWVnKSu6IOo3ueLz4zwaOPbPYHNmM/ZaDUyzyJwS1mZhX7Ex5jqTyW599Gdelh5PDYLQ=="
+  "resolved" "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001255.tgz"
+  "version" "1.0.30001255"
 
 "capture-exit@^2.0.0":
   "integrity" "sha512-PiT/hQmTonHhl/HFGN+Lx3JJUznrVYJ3+AQsnthneZbvW7x+f08Tk7yLJTLEOUvBTbduLeeBkxEaYXUOUrRq6g=="
@@ -3724,11 +3724,6 @@
   "resolved" "https://registry.npmjs.org/crypto-random-string/-/crypto-random-string-1.0.0.tgz"
   "version" "1.0.0"
 
-"cyclist@^1.0.1":
-  "integrity" "sha1-WW6WmP0MgOEgOMK4LW6xs1tiJNk="
-  "resolved" "https://registry.npmjs.org/cyclist/-/cyclist-1.0.1.tgz"
-  "version" "1.0.1"
-
 "css-blank-pseudo@^0.1.4":
   "integrity" "sha512-LHz35Hr83dnFeipc7oqFDmsjHdljj3TQtxGGiNWSOsTLIAubSm4TEz8qCaKFpk7idaQ1GfWscF4E6mgpBysA1w=="
   "resolved" "https://registry.npmjs.org/css-blank-pseudo/-/css-blank-pseudo-0.1.4.tgz"
@@ -3948,6 +3943,11 @@
   "version" "2.3.0"
   dependencies:
     "cssom" "~0.3.6"
+
+"cyclist@^1.0.1":
+  "integrity" "sha1-WW6WmP0MgOEgOMK4LW6xs1tiJNk="
+  "resolved" "https://registry.npmjs.org/cyclist/-/cyclist-1.0.1.tgz"
+  "version" "1.0.1"
 
 "d@^1.0.1", "d@1":
   "integrity" "sha512-m62ShEObQ39CfralilEQRjH6oAMtNCV1xJyEx5LpRYUVN+EviphDgUc/F3hnYbADmkiNs67Y+3ylmlG7Lnu+FA=="
@@ -10980,6 +10980,11 @@
   dependencies:
     "tslib" "^1.8.1"
 
+"tty-browserify@0.0.0":
+  "integrity" "sha1-oVe6QC2iTpv5V/mqadUk7tQpAaY="
+  "resolved" "https://registry.npmjs.org/tty-browserify/-/tty-browserify-0.0.0.tgz"
+  "version" "0.0.0"
+
 "tunnel-agent@^0.6.0":
   "integrity" "sha1-J6XeoGs2sEoKmWZ3SykIaPD8QP0="
   "resolved" "https://registry.npmjs.org/tunnel-agent/-/tunnel-agent-0.6.0.tgz"
@@ -11067,11 +11072,6 @@
   "integrity" "sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c="
   "resolved" "https://registry.npmjs.org/typedarray/-/typedarray-0.0.6.tgz"
   "version" "0.0.6"
-
-"tty-browserify@0.0.0":
-  "integrity" "sha1-oVe6QC2iTpv5V/mqadUk7tQpAaY="
-  "resolved" "https://registry.npmjs.org/tty-browserify/-/tty-browserify-0.0.0.tgz"
-  "version" "0.0.0"
 
 "unicode-canonical-property-names-ecmascript@^1.0.4":
   "integrity" "sha512-jDrNnXWHd4oHiTZnx/ZG7gtUTVp+gCcTTKr8L0HjlwphROEW3+Him+IpvC+xcJEFegapiMZyZe02CyuOnRmbnQ=="

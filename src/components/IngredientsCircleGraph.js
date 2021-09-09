@@ -7,9 +7,12 @@ function IngredientsCircleGraph({ setInfoModal, setShowModal }) {
   const [circleColor4, setCircleColor4] = useState("");
   const [circleColor5, setCircleColor5] = useState("");
   const [circleColor6, setCircleColor6] = useState("");
-  const [circleColor7, setCircleColor7] = useState("");
   const [clicked, setClicked] = useState(false);
   const [timer, setTimer] = useState(0);
+
+  function hideLastRedCircle() {
+    // Just to pass a function to delay()
+  }
 
   async function delay(msec, fn) {
     let promise = new Promise(resolve => setTimeout(resolve, msec));
@@ -34,7 +37,7 @@ function IngredientsCircleGraph({ setInfoModal, setShowModal }) {
             delay(4000, setCircleColor4);
             delay(5000, setCircleColor5);
             delay(6000, setCircleColor6);
-            delay(7000, setCircleColor7);
+            delay(7000, hideLastRedCircle);
           }, 7000)
         );
       } else {
