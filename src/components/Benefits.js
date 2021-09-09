@@ -63,6 +63,11 @@ function Benefits() {
 
   return (
     <div>
+      <header>
+        <h1 className="seoHeader">
+          A Moringa Oleifera szárított levelének hatásai, előnyei
+        </h1>
+      </header>
       <section>
         <div className="info bar7">
           <div id="infoContainer" className={bar7Container}>

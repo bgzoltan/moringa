@@ -13,20 +13,26 @@ function Shop() {
 
   return (
     <div id="shopContainer">
-      <h1>
-        MORINGA <span className="textHighl">TERMÉKEK</span>
-      </h1>
-      <DisplayTeas
-        teas={teas}
-        selectedTea={selectedTea}
-        setSelectedTea={setSelectedTea}
-      />
-      <div style={{ height: "50px" }} />
-      <DisplaySmoothies
-        smoothies={smoothies}
-        selectedSmoothie={selectedSmoothie}
-        setSelectedSmoothie={setSelectedSmoothie}
-      />
+      <header>
+        <h1>
+          MORINGA <span className="textHighl">TERMÉKEK</span>
+        </h1>
+      </header>
+
+      <section>
+        <DisplayTeas
+          teas={teas}
+          selectedTea={selectedTea}
+          setSelectedTea={setSelectedTea}
+        />
+        <div style={{ height: "50px" }} />
+        <DisplaySmoothies
+          smoothies={smoothies}
+          selectedSmoothie={selectedSmoothie}
+          setSelectedSmoothie={setSelectedSmoothie}
+        />
+      </section>
+
       <Footer />
     </div>
   );

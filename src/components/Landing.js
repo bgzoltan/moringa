@@ -48,6 +48,11 @@ function Landing() {
 
   return (
     <div>
+      <header>
+        <h1 className="seoHeader">
+          Moringa Oleifera - csodafa, horse radish tree - ismertető
+        </h1>
+      </header>
       <section>
         {/* First info bar - the main text is on the LEFT side with animation */}
         <div className="info bar1">

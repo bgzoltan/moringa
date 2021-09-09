@@ -336,6 +336,8 @@ body {
         background-color: #5d311a; }
     body #navigation #logo img {
       height: 100px; }
+  body .seoHeader {
+    display: none; }
   body section .bar1 {
     display: flex;
     justify-content: flex-start;

@@ -13,9 +13,12 @@ function Ingredients() {
       <div id={showModal}>
         {infoModal}
       </div>
-      <h1 className="specialText">
-        A MORINGA <span className="textHighl">TÁPANYAGAI</span>
-      </h1>
+      <header>
+        <h1 className="specialText">
+          A MORINGA <span className="textHighl">TÁPANYAGAI</span>
+        </h1>
+      </header>
+
       <div id="ingredientsTitleText">
         <div>
           A Moringa Oleifera a földön fellelhető növények között a legnagyobb
