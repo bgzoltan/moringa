@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 function IngredientsCircleGraph({ setInfoModal, setShowModal }) {
   const [circleColor1, setCircleColor1] = useState("");
@@ -8,7 +8,6 @@ function IngredientsCircleGraph({ setInfoModal, setShowModal }) {
   const [circleColor5, setCircleColor5] = useState("");
   const [circleColor6, setCircleColor6] = useState("");
   const [clicked, setClicked] = useState(false);
-  const [timer, setTimer] = useState(0);
 
   function hideLastRedCircle() {
     // Just to pass a function to delay()
@@ -26,22 +25,22 @@ function IngredientsCircleGraph({ setInfoModal, setShowModal }) {
     fn("outerCircleRed");
   }
 
+  const timer = useRef(null);
+
   useEffect(
     () => {
       if (!clicked) {
-        setTimer(
-          setInterval(() => {
-            delay(1000, setCircleColor1);
-            delay(2000, setCircleColor2);
-            delay(3000, setCircleColor3);
-            delay(4000, setCircleColor4);
-            delay(5000, setCircleColor5);
-            delay(6000, setCircleColor6);
-            delay(7000, hideLastRedCircle);
-          }, 7000)
-        );
+        timer.current = setInterval(() => {
+          delay(1000, setCircleColor1);
+          delay(2000, setCircleColor2);
+          delay(3000, setCircleColor3);
+          delay(4000, setCircleColor4);
+          delay(5000, setCircleColor5);
+          delay(6000, setCircleColor6);
+          delay(7000, hideLastRedCircle);
+        }, 7000);
       } else {
-        clearInterval(timer);
+        clearInterval(timer.current);
       }
     },
     [clicked]
