@@ -1,4 +1,3 @@
-// import "../App.css";
 import React, { useState } from "react";
 import Footer from "./Footer";
 
@@ -108,14 +107,17 @@ function Benefits() {
               <div className="infoSubTitle">levele különleges !</div>
             </header>
             <section id="infoText">
-              A Moringa Oleifera fa összes része közül a levele tartalmazza a
-              legtöbb tápanyagot, ezért ezt használják a leggyakrabban fel a
-              táplálkozásban. Vizsgálatok szerint ráadásul a szárított levél
-              több tápanyagot tartalmaz a nyers levélnél. A szárított levelet
-              nem csak Indiában fogyasztják. Viszonylag igénytelen növény, ezért
-              Moringa ültetvények vannak már Ázsiában, Afrikában és
-              Közép-Amerikában is.
+              A fa összes része közül a levele tartalmazza a legtöbb tápanyagot.
+              Ráadásul a szárított levél több tápanyagot tartalmaz, mint a nyers
+              levél. A szárított levelet nem csak Indiában fogyasztják.
+              Viszonylag igénytelen növény, ezért Moringa ültetvények vannak már
+              Ázsiában, Afrikában és Közép-Amerikában is.
             </section>
+            <button className="buttons">
+              <a className="buttonLink" href="/ingredients">
+                TÁPANYAGOK
+              </a>
+            </button>
           </div>
         </div>
 
@@ -189,9 +191,7 @@ function Benefits() {
           </div>
         </div>
 
-        <footer>
-          <Footer />
-        </footer>
+        <Footer />
       </section>
     </div>
   );

@@ -3,6 +3,7 @@ import CreateTeas from "./CreateTeas";
 import DisplayTeas from "./DisplayTeas";
 import CreateSmoothies from "./CreateSmoothies";
 import DisplaySmoothies from "./DisplaySmoothies";
+import Footer from "./Footer";
 
 function Shop() {
   let teas = CreateTeas();
@@ -26,6 +27,7 @@ function Shop() {
         selectedSmoothie={selectedSmoothie}
         setSelectedSmoothie={setSelectedSmoothie}
       />
+      <Footer />
     </div>
   );
 }

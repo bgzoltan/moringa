@@ -45,7 +45,7 @@ function DisplayTeas({ teas, selectedTea, setSelectedTea }) {
                   {selectedTea.qty}
                 </li>
                 {selectedTea.features.map(feature =>
-                  <button>
+                  <button className="productFeatures">
                     {feature}
                   </button>
                 )}
@@ -59,12 +59,14 @@ function DisplayTeas({ teas, selectedTea, setSelectedTea }) {
                   </li>
                 )}
               </ul>
-              <a
-                className="buttonLink buttonShop"
-                href="https://okosbazar.hu/collections/indiai-bio-moringa-es-tulsi-teak"
-              >
-                IRÁNY A BOLT
-              </a>
+              <button className="buttons buttonShop">
+                {" "}<a
+                  className="buttonLink"
+                  href="https://okosbazar.hu/collections/indiai-bio-moringa-es-tulsi-teak"
+                >
+                  IRÁNY A BOLT
+                </a>
+              </button>
             </div>
           </div>
         </div>

@@ -57,7 +57,7 @@ function DisplaySmoothies({
                   {selectedSmoothie.qtyUse}
                 </li>
                 {selectedSmoothie.features.map(feature =>
-                  <button>
+                  <button className="productFeatures">
                     {feature}
                   </button>
                 )}
@@ -71,12 +71,14 @@ function DisplaySmoothies({
                   </li>
                 )}
               </ul>
-              <a
-                className="buttonLink buttonShop"
-                href="https://okosbazar.hu/collections/moringa-smoothie-porok"
-              >
-                IRÁNY A BOLT
-              </a>
+              <button className="buttons buttonShop">
+                <a
+                  className="buttonLink"
+                  href="https://okosbazar.hu/collections/moringa-smoothie-porok"
+                >
+                  IRÁNY A BOLT
+                </a>
+              </button>
             </div>
           </div>
         </div>
