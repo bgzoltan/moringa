@@ -9,6 +9,9 @@ import Logo from "./img/moringa-logo.jpg";
 function App() {
   return (
     <div className="App">
+      <header>
+        <h1 className="seoHeader"> A csodálatos Moringa Oleifera</h1>
+      </header>
       <Router>
         <nav id="navigation">
           <div id="logo">
