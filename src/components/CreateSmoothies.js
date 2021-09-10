@@ -12,11 +12,11 @@ function CreateSmoothies() {
       this.qtyUse = "6-10 gramm /adag";
       this.features = [
         "VEGÁN",
-        " 🚫GLUTÉN",
-        "🚫FEHÉR CUKOR",
-        "🚫SZÍNEZÉK",
-        "🚫TARTÓSÍTÓSZER",
-        "🚫GMO"
+        "NINCS GLUTÉN",
+        "NINCS FEHÉR CUKOR",
+        "NINCS SZÍNEZÉK",
+        "NINCS TARTÓSÍTÓSZER",
+        "NINCS GMO"
       ];
       this.ingredients = ingredients;
       this.image = image;

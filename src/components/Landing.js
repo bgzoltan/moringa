@@ -56,7 +56,7 @@ function Landing() {
       <section>
         {/* First info bar - the main text is on the LEFT side with animation */}
         <div className="info bar1">
-          <div id="infoContainer" className={bar1Container}>
+          <div className={`infoContainer ${bar1Container}`}>
             <header className="infoTitle borderedTitle specialText">
               HASZNÁLD FEL
               <div className="infoSubTitle">a természet erejét !</div>
@@ -76,7 +76,7 @@ function Landing() {
 
         {/* Second info bar - the main text , is on the RIGHT side with animation */}
         <div className="info bar2">
-          <div id="infoContainer" className={bar2Container}>
+          <div className={`infoContainer ${bar2Container}`}>
             <header className="infoTitle borderedTitle specialText">
               VÉDD MEG
               <div className="infoSubTitle">a testedet !</div>
@@ -95,7 +95,7 @@ function Landing() {
 
         {/* Third info bar - the main text is on the LEFT side with animation */}
         <div className="info bar3">
-          <div id="infoContainer" className={bar3Container}>
+          <div className={`infoContainer ${bar3Container}`}>
             <header className="infoTitle borderedTitle specialText">
               FEDEZD FEL
               <div className="infoSubTitle">a csodafát !</div>
@@ -109,7 +109,7 @@ function Landing() {
               orvoslásban.
             </section>
             <button className="buttons">
-              {" "}<a className="buttonLink" href="/benefits">
+              <a className="buttonLink" href="/benefits">
                 MIÉRT JÓ
               </a>
             </button>

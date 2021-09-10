@@ -25,12 +25,12 @@ function Shop() {
           selectedTea={selectedTea}
           setSelectedTea={setSelectedTea}
         />
-        <div style={{ height: "50px" }} />
+        {/* <div style={{ height: "50px" }} />
         <DisplaySmoothies
           smoothies={smoothies}
           selectedSmoothie={selectedSmoothie}
           setSelectedSmoothie={setSelectedSmoothie}
-        />
+        /> */}
       </section>
 
       <Footer />

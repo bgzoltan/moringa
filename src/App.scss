@@ -3,6 +3,8 @@
 @import "./shop";
 @import url("https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap");
 
+
+ 
 body {
      box-sizing: border-box;
      padding: 0px;
@@ -12,11 +14,12 @@ body {
      font-size: $textFontSize;
      color: $textColor;
      font-family: $normalFontFamily;
+     width:100%;
 
      .specialText {
           font-family: "Parisienne", cursive;
           font-size: calc(#{$textFontSize} * 2.6);
-          padding-left: 30px;
+          // padding-left: 30px;
      }
 
      #navigation {
@@ -25,9 +28,6 @@ body {
           display: flex;
           flex-direction: row;
           background-color: $navBarBgColor;
-          #logo {
-               width: 200px;
-          }
           #navBar {
                display: flex;
                position: fixed;
@@ -37,7 +37,7 @@ body {
                color: $navBarColor;
                background-color: #cae287;
                height: 105px;
-               z-index: 2;
+                            z-index: 2;
                .menuLinks,
                .center {
                     display: flex;
@@ -78,12 +78,12 @@ body {
                }
                .rightLink {
                     clip-path: polygon(100% 0%, 90% 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
-                    background-color: #5d311a ;
+                    background-color: #5d311a;
                     // background-image: linear-gradient(to right, #5d311a 65%, #cae287);
                }
                .leftLink {
                     clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 10% 50%, 0% 0%);
-                    background-color: #5d311a ;
+                    background-color: #5d311a;
                     // background-image: linear-gradient(to left, #5d311a 65%, #cae287);
                }
           }
@@ -93,10 +93,11 @@ body {
      }
 
      .seoHeader {
-          display:none;
+          display: none;
      }
 
      section {
+ 
           .bar1 {
                display: flex;
                justify-content: flex-start;
@@ -104,6 +105,7 @@ body {
                background-repeat: no-repeat;
                background-position: center;
                background-size: cover;
+              
           }
           .bar2 {
                display: flex;
@@ -270,8 +272,10 @@ body {
           .info {
                height: $infoBarHeight;
                width: 100vw;
-               border: 1px solid;
-               #infoContainer {
+               // border: 1px solid;
+               margin:0px;
+               box-sizing: border-box;
+               .infoContainer {
                     background-color: rgba(7, 37, 48, 0.6);
                     width: $infoContainerWidth;
                     margin: 90px 60px 90px 60px;
@@ -320,6 +324,39 @@ body {
                     margin: 90px 30px 90px 30px;
                }
           }
+
+          @media only screen and (max-width: 600px) {
+               .info {
+                    margin: 0px;
+                    height: auto;
+                    .infoContainer {
+                         width: 100%;
+                         margin: 20px;
+                         height: auto;
+                         .infoTitle {
+                              font-family: $normalFontFamily;
+                              font-size: calc(#{$textFontSize} * 1.3);
+                              .infoSubTitle {
+                                   font-size: calc(#{$textFontSize} * 0.8);
+                                   font-weight: 400;
+                                   height: auto;
+                                   text-align: center;
+                              }
+                         }
+                         .borderedTitle {
+                              border-bottom: 1px solid white;
+                              margin: 0px;
+                         }
+                         #infoText {
+                              font-size: calc(#{$textFontSize} * 0.8);
+                              font-weight: 300;
+                              padding: 30px;
+                              max-width: 80%;
+                              line-height: 2.1rem;
+                         }
+                    }
+               }
+          }
      }
      .buttons {
           display: flex;
@@ -339,7 +376,7 @@ body {
                color: $textColor;
                font-family: $normalFontFamily;
                // background-image: linear-gradient(to right, #5d311a 45%, #8a6755);
-               background-color: #5d311a ;
+               background-color: #5d311a;
                width: 200px;
                height: 60px;
                line-height: 60px;
@@ -361,7 +398,7 @@ body {
                border-top: none;
                border-bottom: 0px;
                // background-image: linear-gradient(to rigth, #5d311a 25%, #8a6755);
-               background-color: #5d311a ;
+               background-color: #5d311a;
           }
      }
      footer {
@@ -381,6 +418,7 @@ body {
           .contact {
                font-weight: 400;
                line-height: 35px;
+               text-align: center;
           }
           .developer {
                font-size: 22px;
@@ -391,4 +429,34 @@ body {
                }
           }
      }
+     @media only screen and (max-width: 600px) {
+     #navigation {
+         width:100vw;
+         position:relative;
+          #navBar {
+               width:100%;
+               position:relative;
+               .menuLinks,.leftLink,.rightLink,
+               .center {
+                    width: calc(100% / 5);
+                    font-size: $textFontSize*0.51;
+          
+               }
+               .centerLink {
+                    position: absolute;
+                    top: -100px;
+                    left: calc(50% - 60px);
+                    width: 100px;
+                    height: 170px;
+                    color: white;
+                    background-color: #cae287;
+                    background-image: url("./img/moringalogo.png");
+                    background-position: bottom;
+                    background-repeat: no-repeat;
+                    background-size: 40%;
+                    background-position-y: 100px;
+                    border-radius: 50%;
+                    text-decoration: none;
+               }
+          }}}
 }

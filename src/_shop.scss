@@ -27,88 +27,161 @@
      font-size: $textFontSize;
      color: $textColor;
      font-weight: 700;
-}
-.prBar {
-     display: flex;
-     color: #5d311a;
-     height: auto;
-     width: 100%;
-     background-color: $mainBgColor;
-     background-image: url("./img/back.jpg");
-     background-position: center;
-     .prLeftSide {
-          width: 50%;
+
+     .prBar {
           display: flex;
-          flex-direction: column;
-          align-items: center;
-     }
-     #prRightSide {
-          width: 50%;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          .prInfoContainer {
+          color: #5d311a;
+          height: auto;
+          width: 100%;
+          background-color: $mainBgColor;
+          background-image: url("./img/back.jpg");
+          background-position: center;
+          .prLeftSide {
+               width: 50%;
                display: flex;
                flex-direction: column;
-               width: 80%;
-               height: 80%;
-               margin: 20px;
-               padding: 20px;
-               .prTitle {
-                    font-size: 45px;
-                    font-weight: $textFontWeightHighl;
-                    color: #5d311a;
-                    padding-top: 10px;
-                    padding-bottom: 10px;
+               align-items: center;
+               img {
+                    margin: 0px;
                }
-               .prSelect {
-                    font-size: 30px;
-                    font-weight: $textFontWeight;
-                    font-family: $normalFontFamily;
-                    padding-top: 5px;
-                    padding-bottom: 5px;
-                    border-radius: 9px;
-                    background-color: white;
-               }
-               .prDetails {
-                    padding-top: 10px;
-                    font-size: 20px;
-                    .prDetailsTitle {
+          }
+          .prRightSide {
+               width: 50%;
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+               .prInfoContainer {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    // height: 80%;
+                    // margin-top: 20px;
+                    // padding-top: 20px;
+                    .prTitle {
+                         font-size: 45px;
+                         font-weight: $textFontWeightHighl;
                          color: #5d311a;
-                         padding-top: 20px;
+                         padding-top: 10px;
                          padding-bottom: 10px;
-                         font-size: $textFontSizeHighl;
-                         font-weight: 600;
                     }
-                    .productFeatures {
+                    .prSelect {
+                         font-size: 30px;
+                         font-weight: $textFontWeight;
                          font-family: $normalFontFamily;
-                         font-size: 18px;
-                         padding: 3px;
-                         margin: 2px;
-                         background-color: #a6c945;
-                         border-radius: 5px;
+                         padding-top: 5px;
+                         padding-bottom: 5px;
+                         border-radius: 9px;
+                         background-color: white;
                     }
-                    ul {
-                         margin: 0px;
-                         li {
-                              font-size: $textFontSize;
-                              font-weight: 300;
-                              color: rgb(85, 84, 84);
-                              padding: 2px;
+                    .prDetails {
+                         padding-top: 10px;
+                         font-size: 20px;
+                         .prDetailsTitle {
+                              color: #5d311a;
+                              padding-top: 20px;
+                              padding-bottom: 2 10px;
+                              font-size: $textFontSizeHighl;
+                              font-weight: 600;
                          }
-                    }
-                    .buttonShop {
-                         margin-left: 20px;
-                         margin-top: 20px;
+                         .productFeatures {
+                              height: 30px;
+                              font-family: $normalFontFamily;
+                              font-size: 19px;
+                              padding: 4px;
+                              margin: 2px;
+                              background-color: #a6c945;
+                              border-radius: 5px;
+                         }
+                         ul {
+                              margin: 0px;
+                              li {
+                                   font-size: $textFontSize;
+                                   font-weight: 300;
+                                   color: rgb(85, 84, 84);
+                                   padding: 2px;
+                              }
+                         }
+                         .buttonShop {
+                              margin-left: 20px;
+                              margin-top: 20px;
+                         }
                     }
                }
           }
+          #prSmoothie {
+               color: black;
+               height: $infoBarHeight;
+               width: 100%;
+               border: 1px solid;
+               background-color: $mainBgColor;
+          }
      }
-     #prSmoothie {
-          color: black;
-          height: $infoBarHeight;
-          width: 100%;
-          border: 1px solid;
-          background-color: $mainBgColor;
+}
+@media only screen and (max-width: 600px) {
+     #shopContainer {
+          h1 {
+               margin-top: 20px;
+               font-size: calc(#{$textFontSize} * 1.5);
+          }
+     }
+     .productContainer {
+          .prBar {
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+               width: 100vw;
+               margin: 0px;
+               padding: 0px;
+               .prLeftSide {
+                    width: 100%;
+                    img {
+                         width: 80%;
+                    }
+               }
+               .prRightSide {
+                    width: 100%;
+                    .prInfoContainer {
+                         display: flex;
+                         justify-content: center;
+                         align-items: center;
+                         flex-direction: column;
+                         width: 100%;
+                         height: auto;
+                         // margin: 20px;
+                         // padding: 20px;
+                         .prTitle {
+                              font-size: calc(#{$textFontSize} * 1.2);
+                              font-weight: $textFontWeightHighl;
+                              color: #5d311a;
+                              padding-top: 10px;
+                              padding-bottom: 10px;
+                         }
+                         .prSelect {
+                              font-size: calc(#{$textFontSize} * 1);
+                         }
+                         .prDetails {
+                              padding-top: 10px;
+                              .prDetailsTitle {
+                                   padding-left: 10px;
+                                   font-size: calc(#{$textFontSize} * 1.1);
+                              }
+                              .productFeatures {
+                                   font-size: calc(#{$textFontSize} * 0.7);
+                              }
+                              ul {
+                                   margin: 0px;
+                                   li {
+                                        font-size: calc(#{$textFontSize} * 0.8);
+                                        line-height: calc(#{$textFontSize} * 0.9);
+                                   }
+                              }
+                              .buttonShop {
+                                   margin-left: 20px;
+                                   margin-top: 20px;
+                              }
+                         }
+                    }
+               }
+          }
      }
 }

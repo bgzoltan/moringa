@@ -15,13 +15,11 @@ function DisplayTeas({ teas, selectedTea, setSelectedTea }) {
             alt={`Moringa tea ${selectedTea.flavour}`}
           />
         </div>
-        <div id="prRightSide">
+        <div className="prRightSide">
           <div className="prInfoContainer">
             <div className="prTitle">
               {selectedTea.type}
             </div>
-
-            {/* <div>Választék</div> */}
 
             <select
               onClick={e => teaClickHandler(e.target.value)}
@@ -71,7 +69,6 @@ function DisplayTeas({ teas, selectedTea, setSelectedTea }) {
           </div>
         </div>
       </div>
-      <div />
     </div>
   );
 }

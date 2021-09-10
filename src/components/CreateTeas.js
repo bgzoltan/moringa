@@ -11,11 +11,11 @@ function CreateTeas() {
       this.features = [
         "BIO",
         "VEGÁN",
-        " 🚫GLUTÉN",
-        "🚫CUKOR",
-        "🚫SZÍNEZÉK",
-        "🚫TARTÓSÍTÓSZER",
-        "🚫GMO"
+        " NINCS GLUTÉN",
+        "NINCS CUKOR",
+        "NINCS SZÍNEZÉK",
+        "NINCS TARTÓSÍTÓSZER",
+        "NINCS GMO"
       ];
       this.image = image;
     }

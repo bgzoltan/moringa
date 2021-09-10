@@ -4,7 +4,6 @@ import Landing from "./components/Landing";
 import Benefits from "./components/Benefits";
 import Ingredients from "./components/Ingredients";
 import Shop from "./components/Shop";
-import Logo from "./img/moringa-logo.jpg";
 
 function App() {
   return (
@@ -14,12 +13,6 @@ function App() {
       </header>
       <Router>
         <nav id="navigation">
-          <div id="logo">
-            <Link to="/">
-              <img src={Logo} alt="moringa logo" />
-            </Link>
-          </div>
-
           <div id="navBar">
             <Link className="menuLinks leftLink" to="/">
               MORINGA

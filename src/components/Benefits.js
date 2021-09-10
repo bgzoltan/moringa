@@ -70,7 +70,7 @@ function Benefits() {
       </header>
       <section>
         <div className="info bar7">
-          <div id="infoContainer" className={bar7Container}>
+          <div className={`infoContainer ${bar7Container}`}>
             <header className="infoTitle borderedTitle specialText">
               AZ JÓ ÉTREND
               <div className="infoSubTitle">a legjobb orvosság !</div>
@@ -106,7 +106,7 @@ function Benefits() {
         </div> */}
 
         <div className="info bar8">
-          <div id="infoContainer" className={bar8Container}>
+          <div className={`infoContainer ${bar8Container}`}>
             <header className="infoTitle borderedTitle specialText">
               A MORINGA
               <div className="infoSubTitle">levele különleges !</div>
@@ -127,7 +127,7 @@ function Benefits() {
         </div>
 
         <div className="info bar9">
-          <div id="infoContainer" className={bar9Container}>
+          <div className={`infoContainer ${bar9Container}`}>
             <header className="infoTitle borderedTitle specialText">
               A MORINGA
               <div className="infoSubTitle">SEGÍTHET</div>
@@ -179,7 +179,7 @@ function Benefits() {
         </div>
 
         <div className="info bar10">
-          <div id="infoContainer" className={bar10Container}>
+          <div className={`infoContainer ${bar10Container}`}>
             <header className="infoTitle borderedTitle specialText">
               KOFFEIN MENTES
               <div className="infoSubTitle">energia !</div>
