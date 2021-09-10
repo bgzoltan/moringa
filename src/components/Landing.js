@@ -109,7 +109,10 @@ function Landing() {
               orvoslásban.
             </section>
             <button className="buttons">
-              <a className="buttonLink" href="/benefits">
+              <a
+                className="buttonLink"
+                href="https://www.moringatea.hu/benefits"
+              >
                 MIÉRT JÓ
               </a>
             </button>

@@ -119,7 +119,10 @@ function Benefits() {
               Ázsiában, Afrikában és Közép-Amerikában is.
             </section>
             <button className="buttons">
-              <a className="buttonLink" href="/ingredients">
+              <a
+                className="buttonLink"
+                href="https://www.moringatea.hu/ingredients"
+              >
                 TÁPANYAGOK
               </a>
             </button>

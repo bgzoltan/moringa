@@ -635,7 +635,10 @@ body {
           font-weight: 300;
           padding: 30px;
           max-width: 80%;
-          line-height: 2.1rem; } }
+          line-height: 2.1rem; }
+          body section .info .infoContainer #infoText ol {
+            margin-top: 0px;
+            padding-left: 10px; } }
   body .buttons {
     display: flex;
     flex-direction: column;
