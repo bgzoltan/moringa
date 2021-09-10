@@ -11,7 +11,7 @@
   font-family: $normalFontFamily;
   #showInfoModal {
     position: absolute;
-    left: 20px;
+    left: calc(100% - 500px) / 2;
     top: 300px;
     text-align: left;
     padding: 10px;
@@ -81,7 +81,7 @@
     height: $gridSize;
     width: $gridSize;
     display: grid;
-    grid-template-columns: 30% 30% 30%;
+    grid-template-columns: 33% 33% 33%;
     grid-template-rows: auto auto auto;
     font-size: $textFontSize;
     font-family: $normalFontFamily;
@@ -195,6 +195,13 @@
   }
 
   @media only screen and (max-width: 600px) {
+
+    #showInfoModal {
+      left: 0;
+      top: 200px;
+      width: 100%;
+    }
+
     h1 {
       font-size: calc(#{$textFontSize} * 1.5);
     }
@@ -205,6 +212,7 @@
     }
 
     #nutrientsContainer {
+
       #nutrients {
         height: 400px;
         width: 100%;

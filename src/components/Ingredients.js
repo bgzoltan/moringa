@@ -10,6 +10,7 @@ function Ingredients() {
 
   return (
     <div id="ingredientsContainer">
+      <div id="top" />
       <div id={showModal}>
         {infoModal}
       </div>

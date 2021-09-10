@@ -94,6 +94,8 @@ function IngredientsCircleGraph({ setInfoModal, setShowModal }) {
 
   return (
     <div id="nutrientsContainer">
+      <div id="top" />
+
       <div id="nutrients">
         <div className="outerCircle box1" id={circleColor1}>
           <div

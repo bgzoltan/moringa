@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Footer from "./Footer";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import { HashLink as HLink } from "react-router-hash-link";
 
 function Landing() {
   // States to control the moving DIV of bar1...bar4
@@ -110,9 +111,9 @@ function Landing() {
               orvoslásban.
             </section>
             <button className="buttons">
-              <Link className="buttonLink" to="/benefits">
+              <HLink className="buttonLink" to="/benefits/#top">
                 MIÉRT JÓ
-              </Link>
+              </HLink>
             </button>
           </div>
           {/* <div className="textContainer">

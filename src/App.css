@@ -12,7 +12,7 @@
   font-family: "Yanone Kaffeesatz", sans-serif; }
   #ingredientsContainer #showInfoModal {
     position: absolute;
-    left: 20px;
+    left: calc(100% - 500px)/2;
     top: 300px;
     text-align: left;
     padding: 10px;
@@ -72,7 +72,7 @@
     height: 700px;
     width: 700px;
     display: grid;
-    grid-template-columns: 30% 30% 30%;
+    grid-template-columns: 33% 33% 33%;
     grid-template-rows: auto auto auto;
     font-size: 29px;
     font-family: "Yanone Kaffeesatz", sans-serif; }
@@ -163,6 +163,10 @@
         font-size: 130%;
         font-weight: 700; }
   @media only screen and (max-width: 600px) {
+    #ingredientsContainer #showInfoModal {
+      left: 0;
+      top: 200px;
+      width: 100%; }
     #ingredientsContainer h1 {
       font-size: calc(29px * 1.5); }
     #ingredientsContainer #ingredientsTitleText {
