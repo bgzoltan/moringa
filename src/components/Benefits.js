@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Footer from "./Footer";
+import { Link } from "react-router-dom";
 
 function Benefits() {
   // States to control the moving of DIVs: bar7...bar10
@@ -119,9 +120,9 @@ function Benefits() {
               Ázsiában, Afrikában és Közép-Amerikában is.
             </section>
             <button className="buttons">
-              <a className="buttonLink" href="/ingredients">
+              <Link className="buttonLink" to="/ingredients">
                 TÁPANYAGOK
-              </a>
+              </Link>
             </button>
           </div>
         </div>
