@@ -21,7 +21,7 @@ function DisplaySmoothies({
             alt={`Moringa smoothie ${selectedSmoothie.flavour}`}
           />
         </div>
-        <div id="prRightSide">
+        <div className="prRightSide">
           <div className="prInfoContainer">
             <div className="prTitle">
               {selectedSmoothie.type}
