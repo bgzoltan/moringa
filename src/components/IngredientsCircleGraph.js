@@ -145,7 +145,7 @@ function IngredientsCircleGraph({ setInfoModal, setShowModal }) {
           <div
             onMouseOver={() => mouseHandler(8)}
             onMouseOut={() => mouseOutHandler()}
-            className="nutrientBox box8"
+            className="nutrientBox"
           >
             <p>Fontos</p>
             <p>nyomelemek</p>

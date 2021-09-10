@@ -176,6 +176,8 @@
       #ingredientsContainer #nutrientsContainer #nutrients .box1 {
         transform: translateX(15px) translateY(75px); }
       #ingredientsContainer #nutrientsContainer #nutrients .box2 {
+        display: flex;
+        position: relative;
         transform: translateX(5px) translateY(25px); }
       #ingredientsContainer #nutrientsContainer #nutrients .box3 {
         transform: translateX(-5px) translateY(75px); }
