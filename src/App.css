@@ -13,13 +13,13 @@
   #ingredientsContainer #showInfoModal {
     position: absolute;
     left: calc(100% - 500px)/2;
-    top: 300px;
+    top: 400px;
     text-align: left;
     padding: 10px;
     width: 500px;
     height: auto;
     color: white;
-    background-color: red;
+    background-color: #5d311a;
     border-radius: 9px;
     z-index: 1;
     line-height: 35px; }
@@ -85,9 +85,10 @@
       position: relative;
       clip-path: circle(40%);
       margin: 10px;
-      text-align: center; }
+      text-align: center;
+      transition: background-color 2s; }
     #ingredientsContainer #nutrients #outerCircleRed {
-      background-color: red; }
+      background-color: #5d311a; }
     #ingredientsContainer #nutrients .nutrientBox {
       cursor: pointer;
       z-index: 0;
@@ -104,7 +105,7 @@
       #ingredientsContainer #nutrients .nutrientBox p {
         z-index: 2; }
     #ingredientsContainer #nutrients .nutrientBox:hover {
-      background-color: red; }
+      background-color: #5d311a; }
     #ingredientsContainer #nutrients .box1 {
       transform: translateX(40px) translateY(120px); }
     #ingredientsContainer #nutrients .box2 {
@@ -164,7 +165,11 @@
         font-weight: 700; }
   @media only screen and (max-width: 600px) {
     #ingredientsContainer #showInfoModal {
+      box-sizing: border-box;
+      font-size: calc(29px * 0.8);
+      font-weight: 300;
       left: 0;
+      padding: 20px;
       top: 200px;
       width: 100%; }
     #ingredientsContainer h1 {

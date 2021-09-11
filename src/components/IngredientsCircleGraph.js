@@ -32,7 +32,7 @@ function IngredientsCircleGraph({ setInfoModal, setShowModal }) {
     let promise = new Promise(resolve => setTimeout(resolve, msec));
     await promise;
     setInfoModal("");
-    setShowModal("");
+    setShowModal("hideInfoModal");
     setClicked(false);
   }
 
@@ -42,13 +42,13 @@ function IngredientsCircleGraph({ setInfoModal, setShowModal }) {
     () => {
       if (!firstClick) {
         timer.current = setInterval(() => {
-          delayCircle(1000, setCircleColor1);
-          delayCircle(2000, setCircleColor2);
-          delayCircle(3000, setCircleColor3);
-          delayCircle(4000, setCircleColor4);
-          delayCircle(5000, setCircleColor5);
-          delayCircle(6000, setCircleColor6);
-          delayCircle(7000, hideLastRedCircle);
+          delayCircle(2000, setCircleColor1);
+          delayCircle(4000, setCircleColor2);
+          delayCircle(6000, setCircleColor3);
+          delayCircle(7000, setCircleColor4);
+          delayCircle(8000, setCircleColor5);
+          delayCircle(9000, setCircleColor6);
+          delayCircle(10000, hideLastRedCircle);
         }, 7000);
       } else {
         clearInterval(timer.current);
@@ -60,7 +60,7 @@ function IngredientsCircleGraph({ setInfoModal, setShowModal }) {
   const mouseHandler = box => {
     setFirstClick(true);
     if (!clicked) {
-      delayModal(5000, setShowModal);
+      delayModal(10000, setShowModal);
 
       switch (box) {
         case 1:
