@@ -9,7 +9,6 @@ function IngredientsCircleGraph({ setInfoModal, setShowModal }) {
   const [circleColor6, setCircleColor6] = useState("");
   const [firstClick, setFirstClick] = useState(false);
   const [clicked, setClicked] = useState(false);
-
   function hideLastRedCircle() {
     // Just to pass a function to delayCircle()
   }
@@ -42,14 +41,14 @@ function IngredientsCircleGraph({ setInfoModal, setShowModal }) {
     () => {
       if (!firstClick) {
         timer.current = setInterval(() => {
-          delayCircle(2000, setCircleColor1);
-          delayCircle(4000, setCircleColor2);
-          delayCircle(6000, setCircleColor3);
-          delayCircle(7000, setCircleColor4);
-          delayCircle(8000, setCircleColor5);
-          delayCircle(9000, setCircleColor6);
-          delayCircle(10000, hideLastRedCircle);
-        }, 7000);
+          delayCircle(1200, setCircleColor1);
+          delayCircle(2400, setCircleColor2);
+          delayCircle(3600, setCircleColor3);
+          delayCircle(4800, setCircleColor4);
+          delayCircle(6000, setCircleColor5);
+          delayCircle(7200, setCircleColor6);
+          delayCircle(8400, hideLastRedCircle);
+        }, 8500);
       } else {
         clearInterval(timer.current);
       }
