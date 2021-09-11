@@ -56,8 +56,8 @@ function DisplaySmoothies({
                 <li>
                   {selectedSmoothie.qtyUse}
                 </li>
-                {selectedSmoothie.features.map(feature =>
-                  <button className="productFeatures">
+                {selectedSmoothie.features.map((feature, indx) =>
+                  <button key={indx} className="productFeatures">
                     {feature}
                   </button>
                 )}
@@ -65,8 +65,8 @@ function DisplaySmoothies({
               <div className="prDetailsTitle"> Összetevők</div>
 
               <ul>
-                {selectedSmoothie.ingredients.map(ingredient =>
-                  <li>
+                {selectedSmoothie.ingredients.map((ingredient, indx) =>
+                  <li key={indx}>
                     {ingredient}
                   </li>
                 )}

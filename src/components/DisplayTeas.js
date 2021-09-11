@@ -42,8 +42,8 @@ function DisplayTeas({ teas, selectedTea, setSelectedTea }) {
                 <li>
                   {selectedTea.qty}
                 </li>
-                {selectedTea.features.map(feature =>
-                  <button className="productFeatures">
+                {selectedTea.features.map((feature, indx) =>
+                  <button key={indx} className="productFeatures">
                     {feature}
                   </button>
                 )}
@@ -51,8 +51,8 @@ function DisplayTeas({ teas, selectedTea, setSelectedTea }) {
               <div className="prDetailsTitle"> Összetevők</div>
 
               <ul>
-                {selectedTea.ingredients.map(ingredient =>
-                  <li>
+                {selectedTea.ingredients.map((ingredient, indx) =>
+                  <li key={indx}>
                     {ingredient}
                   </li>
                 )}
