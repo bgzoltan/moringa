@@ -22,7 +22,7 @@ function DisplayTeas({ teas, selectedTea, setSelectedTea }) {
             </div>
 
             <select
-              onClick={e => teaClickHandler(e.target.value)}
+              onChange={e => teaClickHandler(e.target.value)}
               className="prSelect"
               name="Moringa"
             >

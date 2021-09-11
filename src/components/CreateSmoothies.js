@@ -25,7 +25,7 @@ function CreateSmoothies() {
 
   let smoothies = [
     new Smoothie(
-      "mandulás ízű Moringa smoothie por",
+      "mandulás ízű Moringa smoothie",
       "~45 kalória / adag",
       [
         "Palmyra Jaggery (pálmacukor vagy gyógycukor)",
@@ -43,7 +43,7 @@ function CreateSmoothies() {
       "./img/Grenera-Moringa-Smoothie-Mandula.png"
     ),
     new Smoothie(
-      "csokoládés ízű Moringa smoothie por",
+      "csokoládés ízű Moringa smoothie",
       "~40 kalória / adag",
       [
         "Palmyra Jaggery (pálmacukor vagy gyógycukor)",
@@ -61,7 +61,7 @@ function CreateSmoothies() {
       "./img/Grenera-Moringa-Smoothie-Csokoládé.png"
     ),
     new Smoothie(
-      "ananászos ízű Moringa smoothie por",
+      "ananászos ízű Moringa smoothie",
       "~40 kalória / adag",
       [
         "Palmyra Jaggery (pálmacukor vagy gyógycukor)",
@@ -79,7 +79,7 @@ function CreateSmoothies() {
       "./img/Grenera-Moringa-Smoothie-Ananász.png"
     ),
     new Smoothie(
-      "mangós ízű Moringa smoothie por",
+      "mangós ízű Moringa smoothie",
       "~40 kalória / adag",
       [
         "Palmyra Jaggery (pálmacukor vagy gyógycukor)",
@@ -97,7 +97,7 @@ function CreateSmoothies() {
       "./img/Grenera-Moringa-Smoothie-Mango.png"
     ),
     new Smoothie(
-      "gránátalmás ízű Moringa smoothie por",
+      "gránátalmás ízű Moringa smoothie",
       "~45 kalória / adag",
       [
         "Palmyra Jaggery (pálmacukor vagy gyógycukor)",

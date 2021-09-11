@@ -30,7 +30,7 @@ function DisplaySmoothies({
             {/* <div>Választék</div> */}
 
             <select
-              onClick={e => smoothieClickHandler(e.target.value)}
+              onChange={e => smoothieClickHandler(e.target.value)}
               className="prSelect"
               name="Smoothie"
             >
